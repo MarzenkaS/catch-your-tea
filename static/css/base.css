@@ -12,7 +12,19 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 500;
+}
+
+.logo-front {
+    text-decoration: underline;
+}
+
+.fa-user-style {
+    text-decoration: underline;
+}
+
+.list-inline-item-style {
+    text-decoration: underline;
 }
 
 .main-logo-link {
@@ -48,13 +60,17 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
