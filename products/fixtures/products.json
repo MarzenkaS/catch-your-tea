@@ -1,0 +1,129 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"bb111111",
+         "name":"Black Ceylon Tea",
+         "description":"In the case of Ceylon (Sri Lanka), tea is grown practically from sea level to the peaks of the centrally located mountain range. Ceylon is characterized by a delicate aroma, refreshing taste and red-gold color.",
+         "price":4.99,
+         "category":1,
+         "rating":4.6,
+         "image_url":"https://ashitaagrawal.com/wp-content/uploads/2023/05/ceylon-tea-1300x867.jpg",
+         "image":"ceylon.jpeg"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"bb121212",
+         "name":"Black Earl Grey Tea",
+         "description":"One of the most famous and appreciated compositions in the world. Its wonderful taste and aroma are obtained by adding bergamot oil. Earl Gray tea owes its unique taste and aroma to bergamot oil.",
+         "price":5.99,
+         "category":1,
+         "rating":4.6,
+         "image_url":"https://www.floridaoliveoil.com/wp-content/uploads/2017/12/earl_tea.jpg",
+         "image":"earlgrey.jpeg"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"bb131313",
+         "name":"Black Yunnan Tea",
+         "description":"Classic Chinese black tea from the Yunnan province located in China on the border with Vietnam, Burma and Laos. This region is known for growing the best black teas, which have a unique golden color and taste.",
+         "price":5.99,
+         "category":1,
+         "rating":4.7,
+         "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpALy0zXQZBjUy_cI5S9FbhMQXE1Pwo2g_pt0fru3zmA&s",
+         "image":"yunnan.jpeg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"gg212121",
+         "name":"Pure Green Tea",
+         "description":"Green tea from China. The tea is made from young, fresh tea buds, which are picked in early spring.",
+         "price":13.99,
+         "category":2,
+         "rating":3.0,
+         "image_url":"https://assets.epicurious.com/photos/5887d21b5f76684c78cf57db/4:3/w_2384,h_1788,c_limit/green_tea_24012017.jpg",
+         "image":"puregreen.jpeg"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"gg222222",
+         "name":"Green Tea with Mango",
+         "description":"Green tea with Mango is Chinese Sencha with the addition of aromatic and tasty mango fruit. Thanks to this combination, the composition gains a fruity, refreshing taste.",
+         "price":14.99,
+         "category":2,
+         "rating":5.0,
+         "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98cdABg0QwrBzxfooIud4gM7vzZUDuyWTO6DeZlu-fQ&s",
+         "image":"greenmango.jpeg"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"gg232323",
+         "name":"Green Tea with Jasmine",
+         "description":"Jasmine green tea is a tea that stimulates the senses, relaxes and calms down.",
+         "price":15.99,
+         "category":2,
+         "rating":4.7,
+         "image_url":"https://i0.wp.com/www.gopaldharaindia.com/wp-content/uploads/2011/04/Jasmine-Green-Tea-cup-liquor.jpg",
+         "image":"greenjasmine.jpeg"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"ww313131",
+         "name":"Pure White Tea",
+         "description":"White tea is a real pearl among teas. It is made from young buds and leaves collected in early spring from the very top of the twigs of tea bushes.",
+         "price":13.99,
+         "category":3,
+         "rating":4.6,
+         "image_url":"https://sakiproducts.com/cdn/shop/articles/20221107133813-white-tea-recipe-blog_800x800.jpg?v=1667828741",
+         "image":"purewhite.jpeg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"ww323232",
+         "name":"White Tea with Mango",
+         "description":"White tea with mango delights with its taste and fruit aroma. Ingredients: white tea, dried fruits and juices and natural flavors.",
+         "price":14.99,
+         "category":3,
+         "rating":4.6,
+         "image_url":"https://www.yellow-mountain-organic-tea.com/cdn/shop/files/MangoWhiteTea_600x.jpg?v=1699417239",
+         "image":"whitemango.jpeg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"ww333333",
+         "name":"White Tea with Lemongrass",
+         "description":"The addition of lemongrass gives the tea a fresh, citrus aroma that harmonizes with the delicate taste of white tea, creating a refreshing drink.",
+         "price":15.99,
+         "category":3,
+         "rating":4.7,
+         "image_url":"https://images.meesho.com/images/products/318126171/hjk5e_512.jpg",
+         "image":"whitelemongrass.jpeg"
+      }
+   }
+  
+]
