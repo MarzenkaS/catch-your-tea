@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-2gbkr-j#zny+dmky2a5ju*c5jljg)lbcfjrh(bb_)917!+qk+^
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu110.gitpod.io',
-'8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu111.gitpod.io']
+'8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu111.gitpod.io',
+'8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu114.gitpod.io']
 
 
 # Application definition
