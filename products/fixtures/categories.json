@@ -3,24 +3,72 @@
         "pk": 1,
         "model": "products.category",
         "fields": {
-            "name": "black_tea",
-            "friendly_name": "Black Tea"
+            "name": "ceylon",
+            "friendly_name": "Ceylon"
         }
     },
     {
         "pk": 2,
         "model": "products.category",
         "fields": {
-            "name": "green_tea",
-            "friendly_name": "Green Tea"
+            "name": "earl_grey",
+            "friendly_name": "Earl Grey"
         }
     },
     {
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "white_tea",
-            "friendly_name": "White Tea"
+            "name": "yunnan",
+            "friendly_name": "Yunnan"
         }
-    } 
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "pure_green_tea",
+            "friendly_name": "Pure Green Tea"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "green_tea_with_mango",
+            "friendly_name": "Green Tea with Mango"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "green_tea_with_jasmine",
+            "friendly_name": "Green Tea with Jasmine"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "pure_white",
+            "friendly_name": "Pure White"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "white_with_mango",
+            "friendly_name": "White with Mango"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "white_with_lemongrass",
+            "friendly_name": "White with Lemongrass"
+        }
+    }
 ]

@@ -21,7 +21,7 @@
          "name":"Black Earl Grey Tea",
          "description":"One of the most famous and appreciated compositions in the world. Its wonderful taste and aroma are obtained by adding bergamot oil. Earl Gray tea owes its unique taste and aroma to bergamot oil.",
          "price":5.99,
-         "category":1,
+         "category":2,
          "rating":4.6,
          "image_url":"https://www.floridaoliveoil.com/wp-content/uploads/2017/12/earl_tea.jpg",
          "image":"earlgrey.jpeg"
@@ -35,7 +35,7 @@
          "name":"Black Yunnan Tea",
          "description":"Classic Chinese black tea from the Yunnan province located in China on the border with Vietnam, Burma and Laos. This region is known for growing the best black teas, which have a unique golden color and taste.",
          "price":5.99,
-         "category":1,
+         "category":3,
          "rating":4.7,
          "image_url":"https://cdn11.bigcommerce.com/s-gbio3rgsga/images/stencil/1280x1280/products/248/974/1_Golden-Dragon_1__07611.1681506051.jpg?c=2",
          "image":"yunnan.jpg"
@@ -49,7 +49,7 @@
          "name":"Pure Green Tea",
          "description":"Green tea from China. The tea is made from young, fresh tea buds, which are picked in early spring.",
          "price":13.99,
-         "category":2,
+         "category":4,
          "rating":3.0,
          "image_url":"https://assets.epicurious.com/photos/5887d21b5f76684c78cf57db/4:3/w_2384,h_1788,c_limit/green_tea_24012017.jpg",
          "image":"puregreen.jpeg"
@@ -63,7 +63,7 @@
          "name":"Green Tea with Mango",
          "description":"Green tea with Mango is Chinese Sencha with the addition of aromatic and tasty mango fruit. Thanks to this combination, the composition gains a fruity, refreshing taste.",
          "price":14.99,
-         "category":2,
+         "category":5,
          "rating":5.0,
          "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98cdABg0QwrBzxfooIud4gM7vzZUDuyWTO6DeZlu-fQ&s",
          "image":"greenmango.jpeg"
@@ -77,7 +77,7 @@
          "name":"Green Tea with Jasmine",
          "description":"Jasmine green tea is a tea that stimulates the senses, relaxes and calms down.",
          "price":15.99,
-         "category":2,
+         "category":6,
          "rating":4.7,
          "image_url":"https://i0.wp.com/www.gopaldharaindia.com/wp-content/uploads/2011/04/Jasmine-Green-Tea-cup-liquor.jpg",
          "image":"greenjasmine.jpeg"
@@ -91,7 +91,7 @@
          "name":"Pure White Tea",
          "description":"White tea is a real pearl among teas. It is made from young buds and leaves collected in early spring from the very top of the twigs of tea bushes.",
          "price":13.99,
-         "category":3,
+         "category":7,
          "rating":4.6,
          "image_url":"https://sakiproducts.com/cdn/shop/articles/20221107133813-white-tea-recipe-blog_800x800.jpg?v=1667828741",
          "image":"purewhite.jpeg"
@@ -105,7 +105,7 @@
          "name":"White Tea with Mango",
          "description":"White tea with mango delights with its taste and fruit aroma. Ingredients: white tea, dried fruits and juices and natural flavors.",
          "price":14.99,
-         "category":3,
+         "category":8,
          "rating":4.6,
          "image_url":"https://www.yellow-mountain-organic-tea.com/cdn/shop/files/MangoWhiteTea_600x.jpg?v=1699417239",
          "image":"whitemango.jpeg"
@@ -119,7 +119,7 @@
          "name":"White Tea with Lemongrass",
          "description":"The addition of lemongrass gives the tea a fresh, citrus aroma that harmonizes with the delicate taste of white tea, creating a refreshing drink.",
          "price":15.99,
-         "category":3,
+         "category":9,
          "rating":4.7,
          "image_url":"https://images.meesho.com/images/products/318126171/hjk5e_512.jpg",
          "image":"whitelemongrass.jpeg"
