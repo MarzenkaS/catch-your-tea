@@ -14,13 +14,24 @@ def add_to_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    amount = None
+    if 'product_amount' in request.POST:
+        amount = request.POST['product_amount']
     bag = request.session.get('bag', {})
 
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+    if amount:
+        if item_id in list(bag.keys()):
+            if amount in bag[item_id]['items_by_amount'].keys():
+                bag[item_id]['items_by_amount'][amount] += quantity
+            else:
+                bag[item_id]['items_by_amount'][amount] = quantity
+        else:
+            bag[item_id] = {'items_by_amount': {amount: quantity}}
     else:
-        bag[item_id] = quantity
+        if item_id in list(bag.keys()):
+            bag[item_id] += quantity
+        else:
+            bag[item_id] = quantity
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
