@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 # Create your views here.
 
@@ -35,3 +35,29 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """Adjust the quantity of the specified product to the specified amount"""
+
+    quantity = int(request.POST.get('quantity'))
+    amount = None
+    if 'product_amount' in request.POST:
+        amount = request.POST['product_amount']
+    bag = request.session.get('bag', {})
+
+    if amount:
+        if quantity > 0:
+            bag[item_id]['items_by_size'][amount] = quantity
+        else:
+            del bag[item_id]['items_by_amount'][amount]
+            if not bag[item_id]['items_by_amount']:
+                bag.pop(item_id)
+    else:
+        if quantity > 0:
+            bag[item_id] = quantity
+        else:
+            bag.pop(item_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
