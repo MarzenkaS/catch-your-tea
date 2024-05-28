@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+if os.path.exists("env.py"):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,8 +29,9 @@ SECRET_KEY = 'django-insecure-2gbkr-j#zny+dmky2a5ju*c5jljg)lbcfjrh(bb_)917!+qk+^
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu110.gitpod.io',
-'8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu111.gitpod.io',
-'8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu114.gitpod.io']
+                 '8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu111.gitpod.io',
+                 '8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu114.gitpod.io',
+                 ]
 
 
 # Application definition
@@ -78,7 +81,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -146,7 +149,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -170,8 +172,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
