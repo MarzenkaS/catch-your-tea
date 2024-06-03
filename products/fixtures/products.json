@@ -10,7 +10,7 @@
          "category":1,
          "rating":4.6,
          "image_url":"https://ashitaagrawal.com/wp-content/uploads/2023/05/ceylon-tea-1300x867.jpg",
-         "image":"ceylon.jpeg"
+         "image":"ceylon.jpg"
       }
    },
    {
@@ -24,7 +24,7 @@
          "category":2,
          "rating":4.6,
          "image_url":"https://www.floridaoliveoil.com/wp-content/uploads/2017/12/earl_tea.jpg",
-         "image":"earlgrey.jpeg"
+         "image":"earlgrey.jpg"
       }
    },
    {
@@ -52,7 +52,7 @@
          "category":4,
          "rating":3.0,
          "image_url":"https://assets.epicurious.com/photos/5887d21b5f76684c78cf57db/4:3/w_2384,h_1788,c_limit/green_tea_24012017.jpg",
-         "image":"puregreen.jpeg"
+         "image":"puregreen.jpg"
       }
    },
    {
@@ -66,7 +66,7 @@
          "category":5,
          "rating":5.0,
          "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98cdABg0QwrBzxfooIud4gM7vzZUDuyWTO6DeZlu-fQ&s",
-         "image":"greenmango.jpeg"
+         "image":"greenmango.jpg"
       }
    },
    {
@@ -80,7 +80,7 @@
          "category":6,
          "rating":4.7,
          "image_url":"https://i0.wp.com/www.gopaldharaindia.com/wp-content/uploads/2011/04/Jasmine-Green-Tea-cup-liquor.jpg",
-         "image":"greenjasmine.jpeg"
+         "image":"greenjasmine.jpg"
       }
    },
    {
@@ -94,7 +94,7 @@
          "category":7,
          "rating":4.6,
          "image_url":"https://sakiproducts.com/cdn/shop/articles/20221107133813-white-tea-recipe-blog_800x800.jpg?v=1667828741",
-         "image":"purewhite.jpeg"
+         "image":"purewhite.jpg"
       }
    },
    {
@@ -108,7 +108,7 @@
          "category":8,
          "rating":4.6,
          "image_url":"https://www.yellow-mountain-organic-tea.com/cdn/shop/files/MangoWhiteTea_600x.jpg?v=1699417239",
-         "image":"whitemango.jpeg"
+         "image":"whitemango.jpg"
       }
    },
    {
@@ -122,7 +122,7 @@
          "category":9,
          "rating":4.7,
          "image_url":"https://images.meesho.com/images/products/318126171/hjk5e_512.jpg",
-         "image":"whitelemongrass.jpeg"
+         "image":"whitelemongrass.jpg"
       }
    }
 ]
