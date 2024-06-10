@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import ContactForm
 from .models import Contact
+from django.http import HttpResponse
 
 # Create your views here
 
@@ -14,7 +15,8 @@ def contact(request):
                 email=form.cleaned_data['email'],
                 message=form.cleaned_data['message']
             )
-            return redirect('contact')
+            return HttpResponse('<h1>Thanks For Contact Us</h1>')
+            # return redirect('contact')
     else:
         form = ContactForm()
 
