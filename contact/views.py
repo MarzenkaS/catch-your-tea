@@ -14,6 +14,8 @@ def contact(request):
                 email=form.cleaned_data['email'],
                 message=form.cleaned_data['message']
             )
-            return redirect('contact')  # Redirect to a 'thank you' page or the same page
+            return redirect('contact')
     else:
         form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form})
