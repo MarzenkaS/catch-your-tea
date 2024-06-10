@@ -11,12 +11,11 @@
 
 {% block content %}
 
-<h1 class="container-fluid text-black">Contact Us</h1>
+<h1 class="container-fluid text-black text-center">Contact Us</h1>
     <form method="post" class="text-center text-black font-weight-bold">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="text-center">Submit</button>
+        <button type="submit" class="text-center submit-btn">Submit</button>
     </form>
-
 
 {% endblock %}
