@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu110.gitpod.io',
                  '8000-marzenkas-catchyourtea-sp26nx5nwm4.ws-eu114.gitpod.io',
                  '.herokuapp.com',
                  'localhost',
+                 '8000-marzenkas-catchyourtea-dnuc8xka4hi.ws.codeinstitute-ide.net',
                  ]
 
 
