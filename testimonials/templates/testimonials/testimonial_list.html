@@ -15,13 +15,15 @@
     <a href="{% url 'testimonials:add_testimonial' %}">Add Testimonial</a>
     <ul>
         {% for testimonial in testimonials %}
-            <li>
+        <div class="testimonial-item">
+            
                 <strong>{{ testimonial.name }}</strong> - {{ testimonial.product }}<br>
                 {{ testimonial.message }}<br>
                 Rating: {{ testimonial.rating }}<br>
                 <a href="{% url 'testimonials:edit_testimonial' testimonial.pk %}">Edit</a> |
                 <a href="{% url 'testimonials:delete_testimonial' testimonial.pk %}">Delete</a>
-            </li>
+            
+        </div> 
         {% empty %}
             <li>No testimonials yet.</li>
         {% endfor %}
