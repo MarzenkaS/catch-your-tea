@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<h1>Testimonials</h1>
+    <ul>
+        {% for testimonial in testimonials %}
+            <li>
+                <strong>{{ testimonial.name }}</strong> ({{ testimonial.created_at }}):<br>
+                Product: {{ testimonial.product.name }}<br>
+                Rating: {{ testimonial.rating }} stars<br>
+                {{ testimonial.message }}<br>
+                <a href="{% url 'edit_testimonial' testimonial.pk %}">Edit</a>
+                <a href="{% url 'delete_testimonial' testimonial.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_testimonial' %}">Add Testimonial</a>
+
+{% endblock %}
