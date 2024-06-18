@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class ProductTestimonial(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField(blank=True, null=True)
@@ -18,4 +19,3 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.rating} stars)"
-
