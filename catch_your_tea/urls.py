@@ -29,5 +29,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('', include('contact.urls')),
+    path('testimonials/', include('testimonials.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'catch_your_tea.views.handler404'

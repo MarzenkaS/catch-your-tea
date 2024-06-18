@@ -12,18 +12,19 @@
 {% block content %}
 
 <h1>Testimonials</h1>
+    <a href="{% url 'testimonials:add_testimonial' %}">Add Testimonial</a>
     <ul>
         {% for testimonial in testimonials %}
             <li>
-                <strong>{{ testimonial.name }}</strong> ({{ testimonial.created_at }}):<br>
-                Product: {{ testimonial.product.name }}<br>
-                Rating: {{ testimonial.rating }} stars<br>
+                <strong>{{ testimonial.name }}</strong> - {{ testimonial.product }}<br>
                 {{ testimonial.message }}<br>
-                <a href="{% url 'edit_testimonial' testimonial.pk %}">Edit</a>
-                <a href="{% url 'delete_testimonial' testimonial.pk %}">Delete</a>
+                Rating: {{ testimonial.rating }}<br>
+                <a href="{% url 'testimonials:edit_testimonial' testimonial.pk %}">Edit</a> |
+                <a href="{% url 'testimonials:delete_testimonial' testimonial.pk %}">Delete</a>
             </li>
+        {% empty %}
+            <li>No testimonials yet.</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'add_testimonial' %}">Add Testimonial</a>
 
 {% endblock %}
