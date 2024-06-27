@@ -2,31 +2,34 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-<h1>Testimonials</h1>
-    <a href="{% url 'testimonials:add_testimonial' %}">Add Testimonial</a>
+
+<h1 class="text-center"><a href="{% url 'testimonials:add_testimonial' %}" class="text-black">Add Testimonial</a></h1>
+<div class="text-center">
     <ul>
         {% for testimonial in testimonials %}
         <div class="testimonial-item">
-            
-                <strong>{{ testimonial.name }}</strong> - {{ testimonial.product }}<br>
-                {{ testimonial.message }}<br>
-                Rating: {{ testimonial.rating }}<br>
-                <a href="{% url 'testimonials:edit_testimonial' testimonial.pk %}">Edit</a> |
-                <a href="{% url 'testimonials:delete_testimonial' testimonial.pk %}">Delete</a>
-            
-        </div> 
+
+            <strong>{{ testimonial.name }}</strong> - {{ testimonial.product }}<br>
+            {{ testimonial.message }}<br>
+            Rating: {{ testimonial.rating }}<br>
+            <a href="{% url 'testimonials:edit_testimonial' testimonial.pk %}" class="text-success">Edit</a> |
+            <a href="{% url 'testimonials:delete_testimonial' testimonial.pk %}" class="text-danger">Delete</a>
+
+        </div>
         {% empty %}
-            <li>No testimonials yet.</li>
+        <li>No testimonials yet.</li>
         {% endfor %}
     </ul>
+</div>
+
 
 {% endblock %}

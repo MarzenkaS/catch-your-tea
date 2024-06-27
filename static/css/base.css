@@ -185,11 +185,11 @@ input[name='q']::placeholder {
 
 .testimonial-item {
     background-color: white;
-    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 50%;
+    width: 60%;
+    margin-left:20%;
 }
 
 /* -------------------------------- Media Queries */
