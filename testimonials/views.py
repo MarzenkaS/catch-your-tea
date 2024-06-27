@@ -15,10 +15,10 @@ def add_testimonial(request):
     if request.method == 'POST':
         form = TestimonialForm(request.POST)
         if form.is_valid():
+            testimonial = form.save(commit=False)
+            testimonial.user = request.user
             product_id = form.cleaned_data['product'].id
             if Product.objects.filter(id=product_id).exists():
-                testimonial = form.save(commit=False)
-                testimonial.user = request.user
                 testimonial.save()
                 return redirect('testimonials:testimonial_list')
             else:

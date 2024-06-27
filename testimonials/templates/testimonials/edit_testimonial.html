@@ -12,8 +12,8 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1>Edit Testimonial</h1>
-<form method="post">
+<h1 class="text-black text-center">Edit Testimonial</h1>
+<form method="post" class="text-center text-black font-weight-bold">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save</button>
