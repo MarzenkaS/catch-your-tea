@@ -21,7 +21,8 @@
     <a href="{% url 'testimonials:testimonial_list' %}" class="text-black font-weight-bold">Back to list</a>
 {% else %}
     <p>You must be <a href="{% url 'login' %}">logged in</a> to add a testimonial.</p>
-    <a  href="{% url 'testimonials:testimonial_list' %}">Back to list</a>
+    
 {% endif %}
+<a  href="{% url 'testimonials:testimonial_list' %}">Back to list</a>
 
 {% endblock %}
