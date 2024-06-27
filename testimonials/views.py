@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Testimonial
 from .forms import TestimonialForm
@@ -9,6 +10,7 @@ def testimonial_list(request):
     return render(request, 'testimonials/testimonial_list.html', {'testimonials': testimonials})
 
 
+@login_required
 def add_testimonial(request):
     if request.method == 'POST':
         form = TestimonialForm(request.POST)
