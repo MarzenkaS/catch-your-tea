@@ -7,7 +7,8 @@ from products.models import Product
 
 def testimonial_list(request):
     testimonials = Testimonial.objects.all()
-    return render(request, 'testimonials/testimonial_list.html', {'testimonials': testimonials})
+    return render(request, 'testimonials/testimonial_list.html',
+                  {'testimonials': testimonials})
 
 
 @login_required
@@ -39,7 +40,8 @@ def edit_testimonial(request, pk):
             return redirect('testimonials:testimonial_list')
     else:
         form = TestimonialForm(instance=testimonial)
-    return render(request, 'testimonials/edit_testimonial.html', {'form': form})
+    return render(request, 'testimonials/edit_testimonial.html',
+                  {'form': form})
 
 
 @login_required
@@ -48,4 +50,5 @@ def delete_testimonial(request, pk):
     if request.method == 'POST':
         testimonial.delete()
         return redirect('testimonials:testimonial_list')
-    return render(request, 'testimonials/delete_testimonial.html', {'testimonial': testimonial})
+    return render(request, 'testimonials/delete_testimonial.html',
+                  {'testimonial': testimonial})
