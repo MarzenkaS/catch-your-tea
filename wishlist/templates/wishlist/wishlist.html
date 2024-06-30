@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Wishlist</title>
+    <!-- Include any CSS stylesheets here -->
+    <link rel="stylesheet" href="{% static 'wishlist/css/styles.css' %}">
+</head>
+<body>
+    <h1>My Wishlist</h1>
+    <div class="wishlist-container">
+        {% if teas %}
+            <ul>
+                {% for tea in teas %}
+                    <li>
+                        <h3>{{ tea.name }}</h3>
+                        <p>{{ tea.description }}</p>
+                        <form action="{% url 'remove_from_wishlist' tea.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Remove from Wishlist</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Your wishlist is empty.</p>
+        {% endif %}
+    </div>
+    <!-- Include any JavaScript files here -->
+    <script src="{% static 'wishlist/js/scripts.js' %}"></script>
+</body>
+</html>
