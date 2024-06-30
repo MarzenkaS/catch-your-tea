@@ -20,6 +20,12 @@
                     <li>
                         <h3>{{ tea.name }}</h3>
                         <p>{{ tea.description }}</p>
+                        <p>€{{ tea.price }}</p>
+    
+                    
+
+
+
                         <form action="{% url 'remove_from_wishlist' tea.id %}" method="post">
                             {% csrf_token %}
                             <button type="submit">Remove from Wishlist</button>
