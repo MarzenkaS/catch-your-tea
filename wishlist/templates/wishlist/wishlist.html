@@ -2,40 +2,39 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
 <h1 class="text-center text-black font-weight-bold">My Wishlist</h1>
 
-    <div class="wishlist-container">
-        {% if teas %}
-            <ul>
-                {% for tea in teas %}
-                    <li>
-                        <h3>{{ tea.name }}</h3>
-                        <p>{{ tea.description }}</p>
-                        <p>€{{ tea.price }}</p>
-    
-                    
-
-
-
-                        <form action="{% url 'remove_from_wishlist' tea.id %}" method="post">
-                            {% csrf_token %}
-                            <button type="submit">Remove from Wishlist</button>
-                        </form>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>Your wishlist is empty.</p>
-        {% endif %}
-    </div>
+<div class="wishlist-container">
+    {% if teas %}
+    <ul>
+        {% for tea in teas %}
+        <li>
+            <div>
+                <h2 class="text-black">{{ tea.name }}</h2>
+                <p class="col-sm-4 col-12 text-black font-weight-bold">{{ tea.description }}</p>
+                <p class="text-black font-weight-bold">Amount in grams: {{ tea.amount_in_gram }}</p>
+                <p class="text-black font-weight-bold">Price: €{{ tea.price }}</p>
+                <form action="{% url 'remove_from_wishlist' tea.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Remove from Wishlist</button>
+                </form>
+            </div>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Your wishlist is empty.</p>
+    {% endif %}
+</div>
 
 {% endblock %}
