@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 from .models import Wishlist
 from products.models import Product
+from django.contrib import messages
 
 
 def wishlist_view(request):
@@ -14,13 +15,22 @@ def wishlist_view(request):
     return render(request, 'wishlist/wishlist.html', context)
 
 
-@login_required
 def add_to_wishlist(request, product_id):
+    if not request.user.is_authenticated:
+        messages.info(request, "You need to log in or register to add products to your wishlist.")
+        return redirect('login')  # Redirect to your login page
+
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
-    wishlist.products.add(product)
-    return redirect('wishlist')
+    
+    # Check if the product is already in the wishlist
+    if product in wishlist.teas.all():
+        messages.info(request, f"{product.name} is already in your wishlist.")
+    else:
+        wishlist.teas.add(product)
+        messages.success(request, f"{product.name} has been added to your wishlist.")
 
+    return redirect('wishlist')
 
 @login_required
 def remove_from_wishlist(request, product_id):

@@ -14,6 +14,7 @@
 <h1 class="text-center text-black font-weight-bold">My Wishlist</h1>
 
 <div class="wishlist-container">
+    {% if request.user.is_authenticated %}
     {% if teas %}
     <ul>
         {% for tea in teas %}
@@ -25,15 +26,20 @@
                 <p class="text-black font-weight-bold">Price: €{{ tea.price }}</p>
                 <form action="{% url 'remove_from_wishlist' tea.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit">Remove from Wishlist</button>
+                    <button type="submit" class="border-black">Remove from Wishlist</button>
                 </form>
             </div>
+
         </li>
         <br>
         {% endfor %}
     </ul>
     {% else %}
     <p>Your wishlist is empty.</p>
+    {% endif %}
+    {% else %}
+    <p>You need to <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> to view your
+        wishlist.</p>
     {% endif %}
 </div>
 
