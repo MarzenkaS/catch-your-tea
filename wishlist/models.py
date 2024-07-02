@@ -3,11 +3,11 @@ from django.contrib.auth.models import User
 from products.models import Product
 
 
-class Tea(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    amount_in_gram = models.IntegerField(null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+# class Tea(models.Model):
+    # name = models.CharField(max_length=100)
+    # description = models.TextField()
+    # amount_in_gram = models.IntegerField(null=True, blank=True)
+    # price = models.DecimalField(max_digits=6, decimal_places=2)
 
 
 class Wishlist(models.Model):

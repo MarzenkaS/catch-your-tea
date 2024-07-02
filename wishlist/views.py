@@ -41,11 +41,11 @@ def add_to_wishlist(request, product_id):
 
 @login_required
 def remove_from_wishlist(request, product_id):
-    tea = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(Product, id=product_id)
     wishlist = get_object_or_404(Wishlist, user=request.user)
 
-    if tea in wishlist.products.all():
-        wishlist.products.remove(tea)
+    if product in wishlist.products.all():
+        wishlist.products.remove(product)
         # Update the redirect to match your actual wishlist view name or URL pattern name
         return redirect('wishlist')  # Update 'wishlist' to the correct name
     else:
