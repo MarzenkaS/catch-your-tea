@@ -4,13 +4,19 @@ from django.http import HttpResponseForbidden
 from .models import Wishlist
 from products.models import Product
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 
 
+@login_required
 def wishlist_view(request):
-    wishlist = Wishlist.objects.get(user=request.user)
-    teas = wishlist.products.all()
+    try:
+        wishlist = Wishlist.objects.get(user=request.user)
+        products = wishlist.products.all()
+    except Wishlist.DoesNotExist:
+        products = []
+
     context = {
-        'teas': teas,
+        'products': products,
     }
     return render(request, 'wishlist/wishlist.html', context)
 
@@ -22,23 +28,25 @@ def add_to_wishlist(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
-    
+
     # Check if the product is already in the wishlist
-    if product in wishlist.teas.all():
+    if product in wishlist.products.all():
         messages.info(request, f"{product.name} is already in your wishlist.")
     else:
-        wishlist.teas.add(product)
+        wishlist.products.add(product)
         messages.success(request, f"{product.name} has been added to your wishlist.")
 
     return redirect('wishlist')
+
 
 @login_required
 def remove_from_wishlist(request, product_id):
     tea = get_object_or_404(Product, id=product_id)
     wishlist = get_object_or_404(Wishlist, user=request.user)
 
-    if tea in wishlist.teas.all():
-        wishlist.teas.remove(tea)
-        return redirect('wishlist')
+    if tea in wishlist.products.all():
+        wishlist.products.remove(tea)
+        # Update the redirect to match your actual wishlist view name or URL pattern name
+        return redirect('wishlist')  # Update 'wishlist' to the correct name
     else:
         return HttpResponseForbidden("You do not have permission to remove this item from your wishlist.")

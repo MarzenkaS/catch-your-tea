@@ -15,16 +15,16 @@
 
 <div class="wishlist-container">
     {% if request.user.is_authenticated %}
-    {% if teas %}
+    {% if products %}
     <ul>
-        {% for tea in teas %}
+        {% for product in products %}
         <li>
             <div>
-                <h2 class="text-black">{{ tea.name }}</h2>
-                <p class="col-sm-4 col-12 text-black font-weight-bold">{{ tea.description }}</p>
-                <p class="text-black font-weight-bold">Amount in grams: {{ tea.amount_in_gram }}</p>
-                <p class="text-black font-weight-bold">Price: €{{ tea.price }}</p>
-                <form action="{% url 'remove_from_wishlist' tea.id %}" method="post">
+                <h2 class="text-black">{{ product.name }}</h2>
+                <p class="col-sm-4 col-12 text-black font-weight-bold">{{ product.description }}</p>
+                <p class="text-black font-weight-bold">Amount in grams: {{ product.amount_in_gram }}</p>
+                <p class="text-black font-weight-bold">Price: €{{ product.price }}</p>
+                <form action="{% url 'remove_from_wishlist' product.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="border-black">Remove from Wishlist</button>
                 </form>
