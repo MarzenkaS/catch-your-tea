@@ -10,17 +10,15 @@
 {% endblock %}
 
 {% block content %}
-
 {% if user.is_authenticated %}
-<h1 class="text-center text-black">Delete Testimonial</h1>
-<p class="text-black font-weight-bold text-center">Are you sure you want to delete?</p>
-<form method="post" class="text-center text-black font-weight-bold">
-    {% csrf_token %}
-    <button type="submit">Yes, delete</button>
-</form>
+    <h1 class="text-center text-black">Delete Testimonial</h1>
+    <p class="text-black font-weight-bold text-center">Are you sure you want to delete?</p>
+    <form method="post" class="text-center text-black font-weight-bold">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
 {% else %}
-<p>You must be <a href="{% url 'login' %}">logged in</a> to delete a testimonial.</p>
+    <p>You must be <a href="{% url 'login' %}">logged in</a> to delete a testimonial.</p>
 {% endif %}
 <a href="{% url 'testimonials:testimonial_list' %}" class="text-black font-weight-bold">Back to list</a>
-
 {% endblock %}
