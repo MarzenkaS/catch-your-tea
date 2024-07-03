@@ -17,6 +17,7 @@ def wishlist_view(request):
 
     context = {
         'products': products,
+        'on_profile_page': True
     }
     return render(request, 'wishlist/wishlist.html', context)
 
