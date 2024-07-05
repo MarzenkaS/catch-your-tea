@@ -12,7 +12,7 @@
 {% block content %}
 <h1 class="text-center link-add-testimonial">
     {% if user.is_authenticated %}
-        <a href="{% url 'testimonials:add_testimonial' %}" class="text-black">Add Testimonial</a>
+        <a href="{% url 'testimonials:add_testimonial' %}" class="text-black font-weight-bold">Add Testimonial</a>
     {% else %}
         <a href="{% url 'account_login' %}?next={% url 'testimonials:add_testimonial' %}" class="text-black">Add Testimonial</a>
     {% endif %}

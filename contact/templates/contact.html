@@ -10,8 +10,9 @@
 {% endblock %}
 
 {% block content %}
-
-<h1 class="container-fluid text-black text-center">Contact Us</h1>
+<br>
+<h1 class="container-fluid text-black text-center font-weight-bold">Contact Us</h1>
+<br>
     <form method="post" class="text-center text-black font-weight-bold">
         {% csrf_token %}
         {{ form.as_p }}

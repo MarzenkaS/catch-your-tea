@@ -204,6 +204,21 @@ input[name='q']::placeholder {
     margin-bottom: 20px;
 }
 
+/* --------------------------Wishlist */
+
+.wishlist-form {
+    background-color: white;
+}
+
+.wishlist-style {
+    list-style-type: none;
+}
+
+.wishlist-style li {
+margin-left: 20%;
+margin-right: 20%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -368,6 +383,6 @@ input[name='q']::placeholder {
 
     .testimonial-item {
         width: 60%;
-        margin-left: 20%;
+        margin-left: 15%;
     }
 }
