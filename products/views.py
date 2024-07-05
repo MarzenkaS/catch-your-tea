@@ -64,9 +64,11 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    price_100_grams = product.price * 2
 
     context = {
         'product': product,
+        'price_100_grams': price_100_grams,
     }
 
     return render(request, 'products/product_detail.html', context)
