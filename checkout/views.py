@@ -49,6 +49,7 @@ def checkout(request):
                         bag[item.product.id] = {'items_by_amount': {item.amount: item.quantity}}
                 else:
                     bag[item.product.id] = item.quantity
+            request.session['bag'] = bag  # Ensure the session bag is updated
         else:
             bag = request.session.get('bag', {})
 
@@ -110,6 +111,7 @@ def checkout(request):
                         bag[item.product.id] = {'items_by_amount': {item.amount: item.quantity}}
                 else:
                     bag[item.product.id] = item.quantity
+            request.session['bag'] = bag  # Ensure the session bag is updated
         else:
             bag = request.session.get('bag', {})
 
@@ -200,6 +202,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'on_profile_page': True,
     }
 
     return render(request, template, context)
