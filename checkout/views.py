@@ -202,7 +202,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        'on_profile_page': True,
+        'on_profile_page': True
     }
 
     return render(request, template, context)
