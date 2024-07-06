@@ -25,5 +25,8 @@ class Testimonial(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-created_at']  # Order by created_at in descending order
+
     def __str__(self):
         return f'Testimonial for {self.product.name}'
