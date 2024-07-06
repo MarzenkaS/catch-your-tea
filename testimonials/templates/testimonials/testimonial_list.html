@@ -18,12 +18,12 @@
         Testimonial</a>
     {% endif %}
 </h1>
-<div class="col-8">
+<div class="wishlist-container">
     <ul class="testimonial_item-style list-unstyled">
         {% for testimonial in testimonials %}
         <li>
             <div>
-                <div class="testimonial-item-form bg-white text-center col">
+                <div class="testimonial-item-form bg-white text-center">
                     <strong>{{ testimonial.name }}</strong> - {{ testimonial.product.name }}<br>
                     {{ testimonial.message }}<br>
                     Rating: {{ testimonial.rating }}<br>
