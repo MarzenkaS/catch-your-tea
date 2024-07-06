@@ -17,7 +17,7 @@
         <a href="{% url 'account_login' %}?next={% url 'testimonials:add_testimonial' %}" class="text-black">Add Testimonial</a>
     {% endif %}
 </h1>
-<div class="text-center col">
+<div class="wishlist-container">
     <ul class="testimonial_item-style">
         {% for testimonial in testimonials %}
         <div class="testimonial-item-form">

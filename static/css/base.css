@@ -203,8 +203,9 @@ input[name='q']::placeholder {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.testimonialitem-style{
+.testimonial-item-style{
     padding: 0;
+    background-color: white;
 }
 
 /* --------------------------Wishlist */
@@ -385,13 +386,7 @@ margin-right: 20%;
         margin-bottom: 40px;
     }
 
-   .testimonial_item {
-    margin-left: 15%;
-    margin-right:15%;
+   .testimonial_item-style {
     padding: 0;
-   }
-
-   .wishlist-form {
-    background-color: white;
    }
 }
