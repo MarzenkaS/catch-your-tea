@@ -29,11 +29,12 @@
                     {% csrf_token %}
                     <button type="submit" class="border-black">Remove from Wishlist</button>
                 </form>
-                <br>
+                <p>
                 <form class="text-center" action="{% url 'product_detail' product.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="border-black">Select Quantity and Add to Bag</button>
                 </form>
+                </p>
                 <br>
             </div>
         </li>
