@@ -194,8 +194,8 @@ input[name='q']::placeholder {
 }
 
 .testimonial-item-form {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
     padding: 0;
 }
 
@@ -314,11 +314,6 @@ input[name='q']::placeholder {
 
     .header-container {
         padding-top: 164px;
-    }
-    
-    .link-add-testimonial {
-        margin-top: 40px;
-        margin-bottom: 40px;
     }
 }
 
