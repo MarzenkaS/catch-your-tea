@@ -199,11 +199,6 @@ input[name='q']::placeholder {
     padding: 0;
 }
 
-.link-add-testimonial {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 /* --------------------------Wishlist */
 
 .wishlist-style { 
@@ -371,10 +366,5 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
-    }
-
-    .link-add-testimonial {
-        margin-top: 20px;
-        margin-bottom: 40px;
     }
 }
