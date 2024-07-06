@@ -29,6 +29,7 @@
                     <strong>{{ testimonial.name }}</strong> - {{ testimonial.product.name }}<br>
                     {{ testimonial.message }}<br>
                     Rating: {{ testimonial.rating }}<br>
+                    <p>Date: {{ testimonial.created_at|date:"D, M d, Y" }}</p>
                     {% if user == testimonial.user or user.is_superuser %}
                     <a href="{% url 'testimonials:edit_testimonial' testimonial.pk %}" class="text-success">Edit</a> |
                     <a href="{% url 'testimonials:delete_testimonial' testimonial.pk %}" class="text-danger">Delete</a>

@@ -30,3 +30,6 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return f'Testimonial for {self.product.name}'
+
+    def formatted_date(self):
+        return self.created_at.strftime('%B %d, %Y')
