@@ -11,7 +11,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    <h1 class="text-black text-center">Add Testimonial</h1>
+    <h1 class="text-black text-center font-weight-bold">Add Testimonial</h1>
     <form method="post" class="text-center text-black font-weight-bold">
         {% csrf_token %}
         {{ form.as_p }}
@@ -20,5 +20,5 @@
 {% else %}
     <p>You must be <a href="{% url 'login' %}">logged in</a> to add a testimonial.</p>
 {% endif %}
-<a href="{% url 'testimonials:testimonial_list' %}" class="text-black font-weight-bold">Back to list</a>
+<a href="{% url 'testimonials:testimonial_list' %}" class="text-white font-weight-bold">Back to list</a>
 {% endblock %}
