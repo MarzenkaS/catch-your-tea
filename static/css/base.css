@@ -203,7 +203,7 @@ input[name='q']::placeholder {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.testimonial_item-style {
+.testimonialitem-style{
     padding: 0;
 }
 
@@ -219,8 +219,8 @@ input[name='q']::placeholder {
 }
 
 .wishlist-style li {
-margin-left: 15%;
-margin-right: 15%;
+margin-left: 20%;
+margin-right: 20%;
 }
 
 /* -------------------------------- Media Queries */
@@ -393,8 +393,5 @@ margin-right: 15%;
 
    .wishlist-form {
     background-color: white;
-   }
-   .wishlist-style {
-    list-style-type: none;
    }
 }
