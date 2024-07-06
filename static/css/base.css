@@ -215,6 +215,10 @@ input[name='q']::placeholder {
     margin-right: 20%;
 }
 
+.bg-danger-wishlist {
+    background-color: rgb(218, 18, 18);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
