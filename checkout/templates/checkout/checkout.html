@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">Amount: {% if item.product.amount_in_gram %}{ item.amount|upper }{% else %}N/A{% endif %}</p>
+                            <p class="my-0 small">Amount: {% if item.product.amount_in_gram %}{{ item.amount|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
