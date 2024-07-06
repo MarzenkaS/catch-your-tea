@@ -16,11 +16,11 @@
 <div class="wishlist-container">
     {% if request.user.is_authenticated %}
     {% if products %}
-    <ul class="wishlist-style bg-white">
+    <ul class="wishlist-style">
         {% for product in products %}
         <li>
             <div>
-                <div class="wishlist-form text-center">
+                <div class="wishlist-form text-center bg-white">
                 <h2 class="text-black text-center">{{ product.name }}</h2>
                 <p class="col-12 text-black font-weight-bold">{{ product.description }}</p>
                 <p class="text-black font-weight-bold">Price for 50 gram: €{{ product.price }}</p>

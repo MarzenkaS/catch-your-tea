@@ -189,6 +189,10 @@ input[name='q']::placeholder {
 
 /* -------------------------Testimonials */
 
+.testimonial-item-style {
+    padding: 0;
+}
+
 .testimonial-item-form {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -196,14 +200,12 @@ input[name='q']::placeholder {
     border-radius: 5px;
     margin-left: 20%;
     margin-right: 20%;
+    padding: 0;
 }
 
 .link-add-testimonial {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-.testimonial-item-style{
-    padding: 0;
 }
 
 /* --------------------------Wishlist */
@@ -213,9 +215,15 @@ input[name='q']::placeholder {
     padding: 0;
 }
 
+.wishlist-form {
+    padding: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .wishlist-style li {
-margin-left: 20%;
-margin-right: 20%;
+margin-left: 15%;
+margin-right: 15%;
 }
 
 /* -------------------------------- Media Queries */
