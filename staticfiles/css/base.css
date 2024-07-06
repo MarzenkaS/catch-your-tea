@@ -210,8 +210,7 @@ input[name='q']::placeholder {
 
 /* --------------------------Wishlist */
 
-.wishlist-style {
-    
+.wishlist-style { 
     padding: 0;
 }
 
