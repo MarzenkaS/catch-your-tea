@@ -28,15 +28,12 @@ class StripeWH_Handler:
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-        try:
-            send_mail(
-                subject,
-                body,
-                settings.DEFAULT_FROM_EMAIL,
-                [cust_email]
-            )
-        except Exception as e:
-            self.logger.error(f"Error sending email: {e}")
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
 
     def handle_event(self, event):
         """
@@ -59,7 +56,6 @@ class StripeWH_Handler:
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
         )
-
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2)
