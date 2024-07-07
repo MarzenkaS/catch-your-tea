@@ -138,7 +138,7 @@
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var amount = $(this).data('product_amount');
-        var url = /bag/remove/${itemId}/;
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'product_amount': amount};
 
         $.post(url, data)
