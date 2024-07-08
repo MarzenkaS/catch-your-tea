@@ -23,6 +23,13 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+    def add_order(self, order):
+        """
+        Associate the provided order with this user profile.
+        """
+        order.user_profile = self
+        order.save()
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
