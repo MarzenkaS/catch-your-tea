@@ -1,7 +1,7 @@
+from decimal import Decimal
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
-
 
 # Create your views here.
 
@@ -19,25 +19,39 @@ def add_to_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     amount = None
+
+    # Check if there's a selected amount (e.g., 50g, 100g)
     if 'product_amount' in request.POST:
-        amount = request.POST['product_amount']
+        amount = int(request.POST['product_amount'])
+
     bag = request.session.get('bag', {})
 
+    # Calculate the price based on the selected amount or default (50g)
     if amount:
-        if item_id in list(bag.keys()):
-            if amount in bag[item_id]['items_by_amount'].keys():
+        price_per_item = product.get_price_for_amount(amount)
+    else:
+        price_per_item = product.price  # Default price for 50g
+
+    # If the item already exists in the bag
+    if item_id in bag:
+        # Check if there's a selected amount already in the bag
+        if amount:
+            if amount in bag[item_id].get('items_by_amount', {}):
                 bag[item_id]['items_by_amount'][amount] += quantity
-                messages.success(request, f'Updated amount {amount.upper()} {product.name} quantity to {bag[item_id]["items_by_amount"][amount]}')
+                messages.success(request, f'Updated amount {amount}g {product.name} quantity to {bag[item_id]["items_by_amount"][amount]}')
             else:
                 bag[item_id]['items_by_amount'][amount] = quantity
-                messages.success(request, f'Added amount {amount.upper()} {product.name} to your bag')
+                messages.success(request, f'Added amount {amount}g {product.name} to your bag')
         else:
-            bag[item_id] = {'items_by_amount': {amount: quantity}}
-            messages.success(request, f'Added amount {amount.upper()} {product.name} to your bag')
-    else:
-        if item_id in list(bag.keys()):
+            # Add quantity to the existing item in the bag
             bag[item_id] += quantity
             messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+
+    else:
+        # If the item is not in the bag yet
+        if amount:
+            bag[item_id] = {'items_by_amount': {amount: quantity}}
+            messages.success(request, f'Added amount {amount}g {product.name} to your bag')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Added {product.name} to your bag')

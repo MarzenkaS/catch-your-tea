@@ -5,9 +5,8 @@ from products.models import Product
 
 
 def bag_contents(request):
-
     bag_items = []
-    total = 0
+    total = Decimal('0')
     product_count = 0
     bag = request.session.get('bag', {})
 
@@ -24,7 +23,7 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for amount, quantity in item_data['items_by_amount'].items():
-                total += quantity * product.price
+                total += quantity * product.get_price_for_amount(int(amount))
                 product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
@@ -37,8 +36,8 @@ def bag_contents(request):
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        delivery = 0
-        free_delivery_delta = 0
+        delivery = Decimal('0')
+        free_delivery_delta = Decimal('0')
 
     grand_total = delivery + total
 

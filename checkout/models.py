@@ -1,5 +1,7 @@
 import uuid
 
+from decimal import Decimal
+
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
@@ -73,8 +75,30 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
-        super().save(*args, **kwargs)
+        try:
+            # Calculate the price per item based on selected amount or default (50g)
+            if self.product_amount == 100:
+                price_per_item = self.product.get_price_for_amount(100)
+            else:
+                price_per_item = self.product.price  # Default price for 50 grams
+
+            # Ensure price_per_item is a Decimal
+            if not isinstance(price_per_item, Decimal):
+                price_per_item = Decimal(price_per_item)
+
+            # Ensure self.quantity is an integer
+            if not isinstance(self.quantity, int):
+                raise ValueError("self.quantity should be an integer")
+
+            # Calculate line item total
+            self.lineitem_total = price_per_item * Decimal(self.quantity)
+
+            super().save(*args, **kwargs)
+
+        except ValueError as e:
+            # Handle the error gracefully, log or raise as needed
+            print(f"ValueError: {e}")
+            # You might want to raise a more specific exception or handle differently
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'

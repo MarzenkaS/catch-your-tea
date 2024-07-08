@@ -1,3 +1,4 @@
+from decimal import Decimal
 from django.db import models
 
 
@@ -32,4 +33,10 @@ class Product(models.Model):
         return self.name
 
     def get_price_for_amount(self, amount):
-        return (self.price / self.amount_in_gram) * amount
+        """
+        Calculate the price for the given amount.
+        """
+        if amount == 100:
+            return self.price * Decimal('2')  # Double the price for 100 grams
+        else:
+            return (self.price / Decimal(self.amount_in_gram)) * Decimal(amount)
