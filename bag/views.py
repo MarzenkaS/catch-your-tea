@@ -32,9 +32,14 @@ def add_to_bag(request, item_id):
     else:
         price_per_item = product.price  # Default price for 50g
 
+    # Convert price_per_item to float for JSON serialization
+    price_per_item_float = float(price_per_item)
+
+    # Determine which price_per_item to store in the bag
+    item_price_per_item = price_per_item_float if amount else float(product.price)
+
     # If the item already exists in the bag
     if item_id in bag:
-        # Check if there's a selected amount already in the bag
         if amount:
             if amount in bag[item_id].get('items_by_amount', {}):
                 bag[item_id]['items_by_amount'][amount] += quantity
@@ -43,17 +48,14 @@ def add_to_bag(request, item_id):
                 bag[item_id]['items_by_amount'][amount] = quantity
                 messages.success(request, f'Added amount {amount}g {product.name} to your bag')
         else:
-            # Add quantity to the existing item in the bag
-            bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
-
+            bag[item_id]['quantity'] += quantity
+            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]["quantity"]}')
     else:
-        # If the item is not in the bag yet
         if amount:
-            bag[item_id] = {'items_by_amount': {amount: quantity}}
+            bag[item_id] = {'items_by_amount': {amount: quantity}, 'price_per_item': item_price_per_item}
             messages.success(request, f'Added amount {amount}g {product.name} to your bag')
         else:
-            bag[item_id] = quantity
+            bag[item_id] = {'quantity': quantity, 'price_per_item': item_price_per_item}
             messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag

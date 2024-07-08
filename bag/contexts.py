@@ -11,27 +11,46 @@ def bag_contents(request):
     bag = request.session.get('bag', {})
 
     for item_id, item_data in bag.items():
+        product = get_object_or_404(Product, pk=item_id)
+
         if isinstance(item_data, int):
-            product = get_object_or_404(Product, pk=item_id)
-            total += item_data * product.price
-            product_count += item_data
+            quantity = item_data
+            subtotal = quantity * product.price
+            total += subtotal
+            product_count += quantity
             bag_items.append({
                 'item_id': item_id,
-                'quantity': item_data,
+                'quantity': quantity,
                 'product': product,
+                'subtotal': subtotal,
             })
         else:
-            product = get_object_or_404(Product, pk=item_id)
-            for amount, quantity in item_data['items_by_amount'].items():
-                total += quantity * product.get_price_for_amount(int(amount))
+            try:
+                for amount, quantity in item_data.get('items_by_amount', {}).items():
+                    subtotal = quantity * product.get_price_for_amount(int(amount))
+                    total += subtotal
+                    product_count += quantity
+                    bag_items.append({
+                        'item_id': item_id,
+                        'quantity': quantity,
+                        'product': product,
+                        'amount': amount,
+                        'subtotal': subtotal,
+                    })
+            except AttributeError:
+                # Handle cases where 'items_by_amount' is not present or structured unexpectedly
+                quantity = item_data.get('quantity', 0)  # Default to 0 if quantity is missing
+                subtotal = quantity * product.price
+                total += subtotal
                 product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': quantity,
                     'product': product,
-                    'amount': amount,
+                    'subtotal': subtotal,
                 })
 
+    # Calculate delivery and grand total
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
@@ -39,7 +58,7 @@ def bag_contents(request):
         delivery = Decimal('0')
         free_delivery_delta = Decimal('0')
 
-    grand_total = delivery + total
+    grand_total = total + delivery
 
     context = {
         'bag_items': bag_items,
