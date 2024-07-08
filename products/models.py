@@ -21,7 +21,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    amount_in_gram = models.IntegerField(null=True, blank=True)
+    amount_in_gram = models.IntegerField(null=True, blank=True, default=50)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
                                  blank=True)
@@ -30,3 +30,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_price_for_amount(self, amount):
+        return (self.price / self.amount_in_gram) * amount

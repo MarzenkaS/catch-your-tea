@@ -65,10 +65,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     price_100_grams = product.price * 2
+    price_50_grams = product.price
 
     context = {
         'product': product,
         'price_100_grams': price_100_grams,
+        'price_50_grams': price_50_grams
     }
 
     return render(request, 'products/product_detail.html', context)
