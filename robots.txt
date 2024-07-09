@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitempa: https://catch-your-tea-da707f1e0a72.herokuapp.com/sitemap.hml

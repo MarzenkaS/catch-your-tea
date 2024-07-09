@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/bag/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=ceylon</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=earl_grey</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=yunnan</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=ceylon,earl_grey,yunnan</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=pure_green_tea</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=green_tea_with_mango</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=green_tea_with_jasmine</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=pure_green_tea,green_tea_with_mango,green_tea_with_jasmine</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=pure_white</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=white_with_mango</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=white_with_lemongrass</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/?category=pure_white,white_with_mango,white_with_lemongrass</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/contact/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/testimonials/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/login/?next=/wishlist/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/1/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/3/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/2/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/7/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/4/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/8/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/5/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/6/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/products/9/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/login/?next=/testimonials/add/</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/signup/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/signup/?next=%2Ftestimonials%2Fadd%2F</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/login/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://catch-your-tea-da707f1e0a72.herokuapp.com/accounts/login/?next=%2Ftestimonials%2Fadd%2F</loc>
+  <lastmod>2024-07-09T23:18:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
