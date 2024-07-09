@@ -376,4 +376,9 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .introduction {
+        line-height:33px;
+        min-width: 250px;
+    }
 }
