@@ -32,8 +32,7 @@ body {
 }
 
 .introduction {
-    line-height:30px;
-    min-width: 300px;
+    line-height:25px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -345,7 +344,7 @@ input[name='q']::placeholder {
     }
 
     .display-4.logo-font.text-black {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .nav-link {
@@ -381,9 +380,9 @@ input[name='q']::placeholder {
     }
 
     .introduction {
-        line-height:33px;
-        min-width: 300px;
+        line-height:25px;
         padding-left: 10px;
         padding-right: 10px;
-    }
+        }
+
 }
