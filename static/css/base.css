@@ -10,12 +10,12 @@ body {
     font-family: 'Lato';
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
 .logo-front {
     text-decoration: underline;
+}
+
+.logo-font {
+    text-transform: uppercase;
 }
 
 .fa-user-style {
@@ -30,10 +30,15 @@ body {
     width: fit-content;
 }
 
+.introduction {
+    line-height:33px;
+    min-width: 250px;
+}
+
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    min-width: 250px;
 }
 
 .btn-black {
@@ -319,6 +324,11 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .logo-font {
+        margin-top: 13%;
+    }
+
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
