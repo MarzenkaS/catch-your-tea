@@ -12,11 +12,14 @@ body {
 
 .logo-front {
     text-decoration: underline;
-    
 }
 
 .logo-font {
     text-transform: uppercase;
+}
+
+.introduction-name {
+    text-decoration: underline;
 }
 
 .fa-user-style {
