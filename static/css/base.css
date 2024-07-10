@@ -31,16 +31,10 @@ body {
     width: fit-content;
 }
 
-.introduction {
-    line-height:22px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 200px;
+    min-width: 260px;
 }
 
 .btn-black {
@@ -327,10 +321,6 @@ input[name='q']::placeholder {
         padding-top: 164px;
     }
 
-    .logo-font {
-        margin-top: 10%;
-    }
-
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -377,12 +367,6 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
-    }
-
-    .introduction {
-        line-height:22px;
-        padding-left: 10px;
-        padding-right: 10px;
     }
 
 }
