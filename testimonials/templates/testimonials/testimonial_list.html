@@ -11,7 +11,7 @@
 
 {% block content %}
 <br>
-<h1 class="text-center link-add-testimonial">
+<h1 class="text-center link-add-testimonial mt-5">
     {% if user.is_authenticated %}
     <a href="{% url 'testimonials:add_testimonial' %}" class="text-black font-weight-bold">Add Testimonial</a>
     {% else %}

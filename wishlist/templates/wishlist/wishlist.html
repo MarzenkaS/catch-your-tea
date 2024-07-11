@@ -11,7 +11,7 @@
 
 {% block content %}
 <br>
-<h1 class="text-center text-black font-weight-bold">My Wishlist</h1>
+<h1 class="text-center text-black font-weight-bold mt-5">My Wishlist</h1>
 <br>
 <div class="wishlist-container">
     {% if request.user.is_authenticated %}
@@ -20,10 +20,10 @@
         {% for product in products %}
         <li>
             <div>
-                <div class="wishlist-form text-center bg-white">
-                <h2 class="text-black text-center">{{ product.name }}</h2>
-                <p class="col-12 text-black font-weight-bold">{{ product.description }}</p>
-                <p class="text-black font-weight-bold">Price for 50 gram: €{{ product.price }}</p>
+                <div class="wishlist-form text-center bg-black">
+                <h2 class="text-white text-center">{{ product.name }}</h2>
+                <p class="col-12 text-white">{{ product.description }}</p>
+                <p class="text-white font-weight-bold">Price for 50 gram: €{{ product.price }}</p>
                 </div>
                 <form class="text-center" action="{% url 'remove_from_wishlist' product.id %}" method="post">
                     {% csrf_token %}
