@@ -232,10 +232,6 @@ input[name='q']::placeholder {
     color: black;
 }
 
-.underline {
-    text-decoration: underline;
-}
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -389,7 +385,7 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 
-    .underline{
+    .underline {
         text-decoration: underline;
     }
     
