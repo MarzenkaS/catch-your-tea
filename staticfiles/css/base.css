@@ -199,6 +199,13 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* -------------------------Contact form */
+
+.contact-us-name {
+    text-decoration: underline;
+}
+
+
 /* -------------------------Testimonials */
 
 .testimonial-item-style {
@@ -215,6 +222,11 @@ input[name='q']::placeholder {
     text-decoration: underline;
 }
 
+.link-add-testimonial {
+    text-decoration: underline;
+    color: black;
+}
+
 /* --------------------------Wishlist */
 
 .wishlist-style { 
@@ -225,6 +237,10 @@ input[name='q']::placeholder {
     padding: 0;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.my-wishlist-name {
+    text-decoration: underline;
 }
 
 /* -------------------------------- Media Queries */
