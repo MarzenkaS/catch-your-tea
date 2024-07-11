@@ -21,5 +21,5 @@
 {% else %}
     <p>You must be <a href="{% url 'login' %}">logged in</a> to delete a testimonial.</p>
 {% endif %}
-<a href="{% url 'testimonials:testimonial_list' %}" class="text-black font-weight-bold">Back to list</a>
+<a href="{% url 'testimonials:testimonial_list' %}" class="text-black font-weight-bold bg-white">Back to list</a>
 {% endblock %}
