@@ -380,4 +380,8 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
     
+
+    .subscribe-name {
+        margin-top: 20px;
+    }
 }
