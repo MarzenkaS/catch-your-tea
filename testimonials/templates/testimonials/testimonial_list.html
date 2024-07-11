@@ -28,7 +28,7 @@
                 <div class="testimonial-item-form bg-black text-center">
                     <p class="text-white font-weight-bold"><strong>{{ testimonial.name }}</strong></p>
                     <p class="testimonial-product-name-style text-white">{{ testimonial.product.name }}</p>
-                    <p>{{ testimonial.message }}</p>
+                    <p class="text-warning">{{ testimonial.message }}</p>
                     <p class="text-white">Rating: {{ testimonial.rating }}</p>
                     <p class="text-white">Date: {{ testimonial.created_at|date:"D, M d, Y" }}</p>
                     {% if user == testimonial.user or user.is_superuser %}
