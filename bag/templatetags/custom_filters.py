@@ -4,13 +4,14 @@ register = template.Library()
 
 
 @register.filter
-def conditional_double(price, amount):
+def double(price, product):
     try:
         price = float(price)
-        amount = int(amount)
-        if amount == 100:  # Check if the amount is 100
+        amount_in_gram = product.amount_in_gram
+
+        if amount_in_gram != 50:
             return price * 2
-        return price
+        else:
+            return price
     except (ValueError, TypeError):
         return price
-
