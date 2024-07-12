@@ -82,7 +82,7 @@
                                         {% include "bag/product-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price|double:item.product|floatformat:2 }}</p>
+                                        <p class="my-0">€{{ item.product.price|conditional_double:item.product.amount_in_gram|floatformat:2 }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         {% include "bag/quantity-form.html" %}
