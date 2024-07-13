@@ -57,8 +57,7 @@
                         <span class="small"><a href="{% url 'products' %}" class="text-black font-weight-bold">Products
                                 Home</a> | </span>
                         {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term
-                            }}"</strong>{% endif %}
+                        {{ products|length }} Products{% if search_term %} found for <strong>"{{search_term}}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
