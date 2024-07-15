@@ -232,7 +232,7 @@ input[name='q']::placeholder {
     color: black;
 }
 
-.underline {
+.style-underline {
     text-decoration: underline !important;
 }
 
