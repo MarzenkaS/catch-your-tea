@@ -189,7 +189,7 @@ Thanks to Bootstrap my project is responsive on all device sizes
 
 ### Bugs
 
-## Technologies Used
+## Used technologies
 
 ### Work Environments and Hosting
 
@@ -198,6 +198,7 @@ Thanks to Bootstrap my project is responsive on all device sizes
 - [GitPod](https://gitpod.io/) (IDE)
 - [Heroku](https://heroku.com/) (Site hosting)
 - [AWS - Amazon Web servises (S3)](https://aws.amazon.com/) (Hosting static and media files)
+- [Cloudinary](https://cloudinary.com/) (Serving static media files)
 
 
 ### Python Libraries
@@ -213,8 +214,7 @@ Thanks to Bootstrap my project is responsive on all device sizes
 
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/) (User authentication)
 - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
-- [Bootstrap5 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap4.6/)
-- [django-summernote](https://github.com/summernote/django-summernote) (WYSIWYG HTML editor)
+- [Bootstrap4.6 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap4.6/)
 
 ### Payment processing
 
@@ -224,7 +224,6 @@ Thanks to Bootstrap my project is responsive on all device sizes
 
 - [Gmail](https://mail.google.com/) (Real email sending)
 - [Mailchimp](https://mailchimp.com/) (Automated newsletter subscription service)
-
 
 ### SEO/Marketing
 
