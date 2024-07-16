@@ -84,10 +84,12 @@ Navigation Bar
 - Includes Shopping Bag icon under which user can see current total cost
 - Collapsible burger menu with drop-down on small to medium screens
 
-![]()
-![]()
-![]()
-![]()
+![navbar](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/navbar_tvlmxi.png)
+![all products](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/all.products_x365vj.png)
+![product detail](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/product.detail_j8rgcy.png)
+![add to bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167253/catch%20your%20tea/add.to.bag_omphkw.png)
+![shopping bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/shopping.bag_dkugr2.png)
+![order confirmation](https://res.cloudinary.com/dguqjbr12/image/upload/v1721168901/catch%20your%20tea/order.confirmation_xhuwya.png)
 
 My Account
 - Allows user to create an account or log in and after log out
@@ -95,7 +97,10 @@ My Account
 - It allows user to see ,my profile' and from there Order History and delivery information
 - Site owner has Product Management site from where can add a new product for selling
 
-![]()
+![my account](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/my.account_dsnxtj.png)
+![register](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/register_xnpkra.png)
+![my profile](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/my.profile_obcddm.png)
+![product management](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/product.management_qp1sus.png)
 
 Login
 - For registered already user
@@ -105,49 +110,46 @@ Login
 - When username or password are incorrect, user will be informed
 - When user forgets password can recover it by clicking on button Forgot Password
 
-![]()
-![]()
-![]()
+![sign in](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/sign.in_ukyfi4.png)
 
 Logout
 - After user clicks on logout link in nav bar from My Account icon, will see confirm form
 - Then user will be redirected to home page with confirmation message about being signed out
 
-![]()
+![sign out](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/sign.out_b6zwvx.png)
 ![]()
 
 Contact
 - Contact form allows user to send any question to company
 
-![]()
+![contact](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167253/catch%20your%20tea/contact_qbeklo.png)
 
 Testimonials
 - Any user can add a testimonial if logged in
 - Any user can delete or update own testimonials
 
-![]()
-![]()
-![]()
+![testimonial list](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/testimonial.list_o1jbrx.png)
+![add testimonial](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167253/catch%20your%20tea/add.testimonial_unn6ng.png)
+![edit testimonial](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/edit.testimonial_exor16.png)
+![delete testimonial](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/delete.testimonial_hifrhl.png)
 
 Wishlist
 - For logged in user this page allows to keep product for later purchase
 - There is button here which redirects user to product detail page where can amount and quantity of product be choosen
 
-![]()
-![]()
+![wishlist](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/my.wishlist_pffrw9.png)
 
 Home page
 - Includes welcome paragraph short introduction to website and button shop now
 
-![]()
-![]()
+![home](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167260/catch%20your%20tea/home_guokcq.png)
 
 Footer
 - User can find a Facebook link and follow shop on Facebook 
 - There is Subscribe form so user can receive special offers
 - At very bottom of page user can open Privacy Policy
 
-![]()
+![footer](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167260/catch%20your%20tea/footer_wg2lco.png)
 ![]()
 
 ### Future Features
