@@ -179,15 +179,15 @@ I added required Custom Models not covered in the walkthrough in 3 new added app
 
 2- The CRUD principle I did for my original Testimonial Model 
 
-CRUD Testimonial Model:
+    CRUD Testimonial Model:
 
-Create: An authenticated user can create own testimonial
+    Create: An authenticated user can create own testimonial
 
-Read: A user can see and read own and other users' testimonials
+    Read: A user can see and read own and other users' testimonials
 
-Update: An authenticated user can edit and update own testimonial
+    Update: An authenticated user can edit and update own testimonial
 
-Delete: An authenticated user can delete own testimonials
+    Delete: An authenticated user can delete own testimonials
 
 
 Features visualized here [Existing Features](#existing-features)
@@ -233,6 +233,7 @@ No errors in settings.py and urls.py
 ### Lighthouse
 
 I made a Lighthouse while being incognito. Had some issues to achieve high Accessibility and SEO.
+
 - 
 - 
 
