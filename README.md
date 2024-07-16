@@ -91,6 +91,7 @@ Navigation Bar
 ![shopping bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/shopping.bag_dkugr2.png)
 ![order confirmation](https://res.cloudinary.com/dguqjbr12/image/upload/v1721168901/catch%20your%20tea/order.confirmation_xhuwya.png)
 
+
 My Account
 - Allows user to create an account or log in and after log out
 - Username, password and password confirmation are required, email (optional)
@@ -102,6 +103,7 @@ My Account
 ![my profile](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/my.profile_obcddm.png)
 ![product management](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/product.management_qp1sus.png)
 
+
 Login
 - For registered already user
 - Username and password required
@@ -112,6 +114,7 @@ Login
 
 ![sign in](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/sign.in_ukyfi4.png)
 
+
 Logout
 - After user clicks on logout link in nav bar from My Account icon, will see confirm form
 - Then user will be redirected to home page with confirmation message about being signed out
@@ -119,10 +122,12 @@ Logout
 ![sign out](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/sign.out_b6zwvx.png)
 ![]()
 
+
 Contact
 - Contact form allows user to send any question to company
 
 ![contact](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167253/catch%20your%20tea/contact_qbeklo.png)
+
 
 Testimonials
 - Any user can add a testimonial if logged in
@@ -133,16 +138,19 @@ Testimonials
 ![edit testimonial](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/edit.testimonial_exor16.png)
 ![delete testimonial](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/delete.testimonial_hifrhl.png)
 
+
 Wishlist
 - For logged in user this page allows to keep product for later purchase
 - There is button here which redirects user to product detail page where can amount and quantity of product be choosen
 
 ![wishlist](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/my.wishlist_pffrw9.png)
 
+
 Home page
 - Includes welcome paragraph short introduction to website and button shop now
 
 ![home](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167260/catch%20your%20tea/home_guokcq.png)
+
 
 Footer
 - User can find a Facebook link and follow shop on Facebook 
