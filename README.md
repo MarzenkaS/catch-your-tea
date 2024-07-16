@@ -9,8 +9,9 @@ Catch Your Tea is a (fictional) e-commerce online shop. The store is created for
 
 ## Table of Contents
 
-- [User Experience(UX)](#user-experience(UX))
+- [UI/UX)](#uiux)
   - [Agile](#agile)
+  - [Site Goals](#site-goals)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#future-features)
@@ -31,7 +32,7 @@ Catch Your Tea is a (fictional) e-commerce online shop. The store is created for
   - [Media](#media)     
    
 
-## User Experience(UX)
+## UI/UX
 
 The created website is user-friendly and has a visually attractive interface. It was important to keep the interface simple and easy to understand. The website provides immediate and clear feedback on user actions.
 
@@ -40,11 +41,20 @@ The created website is user-friendly and has a visually attractive interface. It
 This project was designed and built using the agile approach. I created a [GitHub project](https://github.com/users/MarzenkaS/projects/15) and used the Kanban board method to divide project elements into user stories.
 All user stories include their required acceptance criterias refer to the project linked to above. Each story has also been labeled to how important a particular feature is for the project to function well.
 
+### Site Goals
+
+This website is a fictitious online store selling various teas. The headquarters of this company is in Berlin.
+On the website, customers can choose from black, green and white teas. The customer pays for the products by card and the parcel is sent to the recipient. The website provides high-quality products. Each customer has access to testimonials to see the opinions of other customers. They can also easily contact the company using the contact form or Facebook.
+
+### 5 Planes of UX
+
+
 ## Features
 ### Existing Features
 
 Navigation Bar
 - Navigation bar is available on all pages and includes clickable logo and nav links.
+- User can search product from Search bar
 - Allows to easily navigate between pages
 - Easy access to the My Account icon
 - Includes Shopping Bag icon under which user can see current total cost
@@ -141,9 +151,9 @@ I added required Custom Models not covered in the walkthrough in 3 new added app
 
 ### CRUD
 
-- Full CRUD functionality is implemented for admin user in the Products app, Testimonials app.
+1- Full CRUD functionality is implemented for admin user in the Products app, Testimonials app.
 
-- The CRUD principle I did for my original Testimonial Model 
+2- The CRUD principle I did for my original Testimonial Model 
 
 CRUD Testimonial Model:
 
