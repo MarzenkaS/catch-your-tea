@@ -1,6 +1,6 @@
 <h1 align="center">Catch Your Tea</h1>
 
-Catch Your Tea is a (fictional) e-commerce online shop. The store is created for lovers of various teas. The user can easily navigate through all pages and choose a product from among many different kinds of teas comming from China. The store offers black, green and white teas. After reading the description and testimonials of other customers, the buyer can purchase a different amount of tea.
+Catch Your Tea is a (fictitious) e-commerce online shop. The store is created for lovers of drinking various teas. The user can easily navigate through all pages and choose a product from among many different kinds of teas comming from China. The store offers black, green and white teas. After reading the description and testimonials of other customers, the buyer can purchase a different amount of tea.
 
 ![responsive mockup](https://res.cloudinary.com/dguqjbr12/image/upload/v1721071254/catch%20your%20tea/Zrzut_ekranu_389_emftac.png)
 
@@ -47,6 +47,27 @@ This website is a fictitious online store selling various teas. The headquarters
 On the website, customers can choose from black, green and white teas. The customer pays for the products by card and the parcel is sent to the recipient. The website provides high-quality products. Each customer has access to testimonials to see the opinions of other customers. They can also easily contact the company using the contact form or Facebook.
 
 ### 5 Planes of UX
+
+#### Strategy
+It meets the user's needs and product goals. A website intended for tea lovers. The scope of the website is global. The website helps the user to easily review and purchase teas. Easy contact with the company and the ability to add testimonials.
+
+#### Scope
+Defines what functions and features are included in the scope of the project.
+The key to this project was the basic and necessary e-commerce functionality. The most of the available features are basic requirements. Features such as user registration and login, user profile creation, checkout functionality and secure online payments, as well as basic CRUD functionality for authorized users had to be implemented.
+
+#### Structure
+It determines how users can navigate the site and use all existing features.
+The structure of the website is based on a basic e-commerce application.
+The structure allows users to browse products and make purchases, as well as visit the testimonials page. Authenticated users can store their personal information in their user profile for faster order processing. They can also add products to their wishlist for later.
+
+#### Skeleton
+Inserts functions defined in the structure into navigation elements. The navigation bar and main content have a standard layout. The navigation bar contains links to the main features and functions of the site. On small and medium screens, the burger drop-down menu replaces the full navigation bar.
+The cart link in the navigation bar is updated every time a user adds a product.
+Products are displayed in card form. Testimonials are on separate page.
+Buttons and links have appropriate names.
+
+#### Surface
+The surface of project encompasses all the visual and interactive elements that users interact with.
 
 
 ## Features
