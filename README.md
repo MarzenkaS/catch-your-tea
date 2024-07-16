@@ -228,6 +228,7 @@ No errors in settings.py and urls.py
 
 
 ### Lighthouse
+
 I made a Lighthouse while being incognito. Had some issues to achieve high Accessibility and SEO.
 - 
 - 
@@ -251,7 +252,6 @@ Thanks to Bootstrap my project is responsive on all device sizes
 ## Used technologies
 
 ### Work Environments and Hosting
-
 - [Lucid](https://lucid.app/) (ERD diagrams)
 - [GitHub](https://github.com/) (Version control)
 - [GitPod](https://gitpod.io/) (IDE)
@@ -259,9 +259,7 @@ Thanks to Bootstrap my project is responsive on all device sizes
 - [AWS - Amazon Web servises (S3)](https://aws.amazon.com/) (Hosting static and media files)
 - [Cloudinary](https://cloudinary.com/) (Serving static media files)
 
-
 ### Python Libraries
-
 - [Gunicorn](https://pypi.org/project/gunicorn/) (Python HTTP server for WSGI applications)
 - [pyscopg2](https://pypi.org/project/psycopg2/) (PostgreSQL Database adapter)
 - [Pillow](https://pypi.org/project/Pillow/) (Python Imaging Library)
@@ -270,27 +268,31 @@ Thanks to Bootstrap my project is responsive on all device sizes
 - [Flake8](https://flake8.pycqa.org/en/latest/) (Python linter used for python code validation)
 
 ### Django Libraries
-
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/) (User authentication)
 - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
 - [Bootstrap4.6 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap4.6/)
 
 ### Payment processing
-
 - [Stripe](https://stripe.com/) (Online payment platform)
 
 ### Emails/Newsletter
-
 - [Gmail](https://mail.google.com/) (Real email sending)
 - [Mailchimp](https://mailchimp.com/) (Automated newsletter subscription service)
 
 ### SEO/Marketing
-
 - [XML Sitemaps](https://www.xml-sitemaps.com/) (Sitemap generator)
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 
 ## Deployment
 
 ## Credits
+
 ### Content
+1. The text for ma project comes form [Czas na Herbatę](https://czasnaherbate.net/)
+2. The icons comes from [Font Awesome](https://fontawesome.com/)
+3. Fonts are taken from [Google Fonts](https://fonts.google.com/)
+
 ### Media
+1. Bacground image for home page is taken from [pexels.com](https://www.pexels.com)
+2. Images for all teas come from [images Google](https://www.google.com/imghp?hl=en&ogbl)
+2. [Responisve image](https://ui.dev/amiresponsive)
