@@ -12,6 +12,8 @@ Catch Your Tea is a (fictitious) e-commerce online shop. The store is created fo
 - [UI/UX)](#uiux)
   - [Agile](#agile)
   - [Site Goals](#site-goals)
+  - [5 Planes of UX](#5-planes-of-ux)
+- [SEO and Marketing](#seo-and-marketing)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#future-features)
@@ -69,6 +71,7 @@ Buttons and links have appropriate names.
 #### Surface
 The surface of project encompasses all the visual and interactive elements that users interact with.
 
+## SEO and Marketing
 
 ## Features
 ### Existing Features
