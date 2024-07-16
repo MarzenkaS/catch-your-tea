@@ -32,13 +32,22 @@ Catch Your Tea is a (fictional) e-commerce online shop. The store is created for
    
 
 ## User Experience(UX)
+
+The created website is user-friendly and has a visually attractive interface. It was important to keep the interface simple and easy to understand. The website provides immediate and clear feedback on user actions.
+
 ### Agile
+
+This project was designed and built using the agile approach. I created a [GitHub project](https://github.com/users/MarzenkaS/projects/15) and used the Kanban board method to divide project elements into user stories.
+All user stories include their required acceptance criterias refer to the project linked to above. Each story has also been labeled to how important a particular feature is for the project to function well.
 
 ## Features
 ### Existing Features
+
 Navigation Bar
 - Navigation bar is available on all pages and includes clickable logo and nav links.
-- Allows to easily move between pages.
+- Allows to easily navigate between pages
+- Easy access to the My Account icon
+- Includes Shopping Bag icon under which user can see current total cost
 - Collapsible burger menu with drop-down on small to medium screens
 
 ![]()
@@ -47,8 +56,10 @@ Navigation Bar
 ![]()
 
 My Account
-- Allows user to create an account or log in
+- Allows user to create an account or log in and after log out
 - Username, password and password confirmation are required, email (optional)
+- It allows user to see ,my profile' and from there Order History and delivery information
+- Site owner has Product Management site from where can add a new product for selling
 
 ![]()
 
@@ -58,32 +69,37 @@ Login
 - Contains "Remember me" option
 - After signed in, user see confirmation
 - When username or password are incorrect, user will be informed
+- When user forgets password can recover it by clicking on button Forgot Password
 
 ![]()
 ![]()
 ![]()
 
 Logout
-- After user clicks on logout link in nav bar, will see confirm form
+- After user clicks on logout link in nav bar from My Account icon, will see confirm form
 - Then user will be redirected to home page with confirmation message about being signed out
 
 ![]()
 ![]()
 
 Contact
-- An authenticated user from nav bar can navigate to add review page
-- Afte adding review and clicking Submit button will see confirmation
-- User can delete or edit and update own review
-- Confirmation message about delete and update will be shown to a user
+- Contact form allows user to send any question to company
 
 ![]()
 
 Testimonials
+- Any user can add a testimonial if logged in
+- Any user can delete or update own testimonials
 
+![]()
+![]()
 ![]()
 
 Wishlist
+- For logged in user this page allows to keep product for later purchase
+- There is button here which redirects user to product detail page where can amount and quantity of product be choosen
 
+![]()
 ![]()
 
 Home page
@@ -98,26 +114,38 @@ Footer
 - At very bottom of page user can open Privacy Policy
 
 ![]()
-
+![]()
 
 ### Future Features
 
+- Increase number of products on site
+- Add videos how to prepare some teas
+
 ## Database Design
+
 ### Database Model
 
 The database model diagram was designed using [draw.io](https://app.diagrams.net/) 
 
-![]()
+![ERD1](https://res.cloudinary.com/dguqjbr12/image/upload/v1721158664/catch%20your%20tea/ERD1_uhwp9v.png)
+![ERD2](https://res.cloudinary.com/dguqjbr12/image/upload/v1721158665/catch%20your%20tea/ERD2_nykp1l.png)
 
 ### Custom Model
 
-To build my models, I followed the walkthrough project created by the Code Institute and adapted product Model for my project's requirements.
-I added required Custom Models not covered in the walkthrough - Contact Model, Wishlist Model and Testimonials Model
+To build my models, I followed the Boutique Ado walkthrough project created by the Code Institute and adapted some Models for my project's requirements by removing or adding fields. I have changed UserProfile ( profiles app), Product ( products app), Order ( checkout app) and OrderLineItem ( checkout app) Models.
+
+I added required Custom Models not covered in the walkthrough in 3 new added app:
+- Contact Model ( Contact app)
+- Wishlist Model ( Wishlist app)
+- Testimonial Model and ProductTestimonial Model ( Testimonials app)
 
 ### CRUD
-The CRUD principle I did for my original Testimonials Model 
 
-CRUD Testimonials Model:
+- Full CRUD functionality is implemented for admin user in the Products app, Testimonials app.
+
+- The CRUD principle I did for my original Testimonial Model 
+
+CRUD Testimonial Model:
 
 Create: An authenticated user can create own testimonial
 
