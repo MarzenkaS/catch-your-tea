@@ -86,11 +86,17 @@ Navigation Bar
 - Includes Shopping Bag icon under which user can see current total cost
 - Collapsible burger menu with drop-down on small to medium screens
 
+1- navbar view
 ![navbar](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/navbar_tvlmxi.png)
+2- all products view
 ![all products](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/all.products_x365vj.png)
+3- product detail view
 ![product detail](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/product.detail_j8rgcy.png)
+4- add to bag view
 ![add to bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167253/catch%20your%20tea/add.to.bag_omphkw.png)
+5- shopping bag view
 ![shopping bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/shopping.bag_dkugr2.png)
+6- order confirmation view
 ![order confirmation](https://res.cloudinary.com/dguqjbr12/image/upload/v1721168901/catch%20your%20tea/order.confirmation_xhuwya.png)
 
 
@@ -271,10 +277,10 @@ Thanks to Bootstrap my project is responsive on all device sizes
 ## Used technologies
 
 ### Languages
-- [Python](https://www.python.org/) was used as the main scripting language.
-- [HTML](https://www.w3schools.com/html/) was used to present and structure content.
-- [CSS](https://www.w3schools.com/css/default.asp) was used to style content.
-- [JavaScript](https://www.w3schools.com/js/default.asp) ( [jQuery](https://jquery.com/) ) was used to manipulate DOM.
+- [Python](https://www.python.org/) was used as the main scripting language
+- [HTML](https://www.w3schools.com/html/) was used to present and structure content
+- [CSS](https://www.w3schools.com/css/default.asp) was used to style content
+- [JavaScript](https://www.w3schools.com/js/default.asp) ( [jQuery](https://jquery.com/) ) was used to manipulate DOM
 
 ### Work Environments and Hosting
 - [Lucid](https://lucid.app/) (ERD diagrams)
