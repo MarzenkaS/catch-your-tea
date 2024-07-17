@@ -14,7 +14,20 @@
 
 ## Search Engine Optimisation(SEO)
 
+### Meta tags
+
+In the head of base.html, <meta name="description" ... and <meta name="keywords" ... tags were included.
+
 ### Keywords
+
+On home page small introduction contains almost all keywords which are inlcuded in 
+<meta name="keywords" content="tea, your tea, catch, best selections, black tea, green tea, white tea, pure, mango, jasmine, lemongrass, ceylon, earl grey, yunnan, gift, benefits, online shop, drinking, healthy tea, leaves, chinese, china, health, unique,taste, shopping, store"
+
+
+For searching keywords I used the website [Wordtracker](https://www.wordtracker.com/). However site didn't show me an interesting options. The website wasn't very helpful in my case.
+
+![wordtracker](https://res.cloudinary.com/dguqjbr12/image/upload/v1721236370/catch%20your%20tea/wordtracker_vo5rwi.png)
+
 ### Sitemap
 
 `sitemap.xml` was added to the project's root folder to allow search engines to crawl and navigate
