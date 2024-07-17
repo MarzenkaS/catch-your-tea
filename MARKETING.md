@@ -3,6 +3,7 @@
 ## Table of Contents
 
 [Search Engine Optimisation (SEO)](#search-engine-optimisation-seo)
+- [Meta Tags](#meta-tags)
 - [Keywords](#keywords)
 - [Sitemap](#sitemap)
 - [Robots.txt](#robotstxt)
@@ -14,7 +15,7 @@
 
 ## Search Engine Optimisation(SEO)
 
-### Meta tags
+### Meta Tags
 
 In the head of base.html, <meta name="description" ... and <meta name="keywords" ... tags were included.
 
@@ -22,7 +23,6 @@ In the head of base.html, <meta name="description" ... and <meta name="keywords"
 
 On home page small introduction contains almost all keywords which are inlcuded in 
 <meta name="keywords" content="tea, your tea, catch, best selections, black tea, green tea, white tea, pure, mango, jasmine, lemongrass, ceylon, earl grey, yunnan, gift, benefits, online shop, drinking, healthy tea, leaves, chinese, china, health, unique,taste, shopping, store"
-
 
 For searching keywords I used the website [Wordtracker](https://www.wordtracker.com/). However site didn't show me an interesting options. The website wasn't very helpful in my case.
 
@@ -35,7 +35,6 @@ For searching keywords I used the website [Wordtracker](https://www.wordtracker.
 ### Robots.txt
 
 `robots.txt` was added to the project's root folder to let search engines know which pages are accessible to web spiders
-
 
 ## Web Marketing - strategy
 
@@ -59,4 +58,5 @@ Facebook business page contains all necessary information. The user can follow s
 For email marketing I used The MailChimp Newsletter subscription service. It is ideal for online business and it is free and simple to set up. The newsletter subscription is completely optional for customers. The service is represented on the site in the footer as a small form with email required field.
 
 
+Facebook and MailCHimp in footer
 ![Footer](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167260/catch%20your%20tea/footer_wg2lco.png)
