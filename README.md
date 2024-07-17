@@ -13,7 +13,7 @@ Catch Your Tea is a (fictitious) e-commerce online shop. The store is created fo
   - [Agile](#agile)
   - [Site Goals](#site-goals)
   - [5 Planes of UX](#5-planes-of-ux)
-- [SEO and Marketing](#seo-and-marketing)
+- [SEO and Web Marketing](#seo-and-web-marketing)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#future-features)
@@ -71,7 +71,9 @@ Buttons and links have appropriate names.
 #### Surface
 The surface of project encompasses all the visual and interactive elements that users interact with.
 
-## SEO and Marketing
+## SEO and Web Marketing
+
+An overview of the marketing research for this project can be found here [SEO and Web Marketing file](MARKETING.md)
 
 ## Features
 ### Existing Features
@@ -164,6 +166,9 @@ Footer
 
 - Increase number of products on site
 - Add videos how to prepare some teas
+- Create forum for users
+- The overall rating of the product should change depending on how users rate the tea
+- Available product stocks visible to the user
 
 ## Database Design
 
