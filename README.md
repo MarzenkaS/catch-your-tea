@@ -270,6 +270,12 @@ Thanks to Bootstrap my project is responsive on all device sizes
 
 ## Used technologies
 
+### Languages
+- [Python](https://www.python.org/) was used as the main scripting language.
+- [HTML](https://www.w3schools.com/html/) was used to present and structure content.
+- [CSS](https://www.w3schools.com/css/default.asp) was used to style content.
+- [JavaScript](https://www.w3schools.com/js/default.asp) ( [jQuery](https://jquery.com/) ) was used to manipulate DOM.
+
 ### Work Environments and Hosting
 - [Lucid](https://lucid.app/) (ERD diagrams)
 - [GitHub](https://github.com/) (Version control)
@@ -290,6 +296,10 @@ Thanks to Bootstrap my project is responsive on all device sizes
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/) (User authentication)
 - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
 - [Bootstrap4.6 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap4.6/)
+
+## Framework
+- [Django](https://www.djangoproject.com/) was used as the main Python framework
+- [Bootstrap](https://getbootstrap.com/) was heavily used for styling
 
 ### Payment processing
 - [Stripe](https://stripe.com/) (Online payment platform)
