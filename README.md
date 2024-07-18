@@ -227,7 +227,7 @@ Features visualized here [Existing Features](#existing-features)
 ## Testing
 ### Validator testing
 
-HTML W3C validator
+1. HTML W3C validator
 
 - templates
 ![]()
@@ -245,13 +245,13 @@ HTML W3C validator
 ![]()
 
 
-CSS W3C validator
+2. CSS W3C validator
 
 No errors
 ![]()
 
 
-JavaScript JSHint
+3. JavaScript JSHint
 
 - stripe_elements.js 
 
@@ -263,7 +263,7 @@ Line 117 missing semicolon
 No errors
 
 
-Python CI Python Linter
+4. Python CI Python Linter
 
 All files are error-free, some had errors because the code line was too long.
 
@@ -366,13 +366,14 @@ Thanks to Bootstrap my project is responsive on all device sizes
 - [XML Sitemaps](https://www.xml-sitemaps.com/) (Sitemap generator)
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 
+
 ## Deployment
 
-This project was deployed using [Heroku](https://heroku.com/), [ElephantSQL](https://www.elephantsql.com/) and [AWS](https://aws.amazon.com/). For a full list of libraries refer to [Technologies Used](#technologies-used).
+My project was deployed using [Heroku](https://heroku.com/), [ElephantSQL](https://www.elephantsql.com/) and [AWS](https://aws.amazon.com/).
 
 #### Installing libraries
 
-The following steps outline all libraries needed for successful deployment on Heroku. All necessary requirements and settings updates will not be discussed in this section as they are assumed as logical follow-up steps to installments. For full explanation on how to install these libraries, refer to the links provided in [Technologies Used](#technologies-used).
+The following libraries needed for successful deployment on Heroku.
 
 - Install **pyscopg2** (connects to PostgreSQL): ``pip 3 install dj_database_url pyscopg2``
 - Install **Gunicorn** (server used to run Django on Heroku): ``pip3 install django gunicorn``
@@ -389,7 +390,7 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 
 - Log into ElephantSQL and go to Dashboard
 - Click **Create New Instance**
-- Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen). Tags are optional.
+- Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen).
 - Click **Select Region** and choose appropriate Data center
 - Click **Review**, check all details and click **Create Instance**
 - Return to Dashboard on click on the name of the newly created instance
@@ -398,8 +399,8 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 #### Hiding sensitive information
 
 - Create ``env.py`` file and ensure it is included in the ``.gitignore`` file
-- Add ``import os`` to env.py file and set environment variable **DATABASE_URL** to the URL copied from ElephantSQL (``os.environ["DATABASE_URL"]="<copiedURL>"``)
-- Below, set **SECRET_KEY** variable (``os.environ["SECRET_KEY"]="mysecretkey"``, but be more inventive about the key string!)
+- Add ``import os`` to env.py file and set environment variable **DATABASE_URL** to the URL copied from ElephantSQL  os.environ.setdefault("DATABASE_URL", "copiedURL")
+- Below, set **SECRET_KEY**  os.environ.setdefault('SECRET_KEY', 'mysecretkey')
 
 #### Update Settings
 
