@@ -143,14 +143,6 @@ else:
         }
     }
 
-# DATABASES = {
-# 'default': dj_database_url.parse('postgres://jxfznvkd:rQL8q0rDyC2AGZk4--xbyqLIX88f2pJi@flora.db.elephantsql.com/jxfznvkd')
-# 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

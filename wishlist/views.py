@@ -24,7 +24,9 @@ def wishlist_view(request):
 
 def add_to_wishlist(request, product_id):
     if not request.user.is_authenticated:
-        messages.info(request, "You need to log in or register to add products to your wishlist.")
+        messages.info(
+            request,
+            "You need to log in or register to add products to your wishlist.")
         return redirect('login')  # Redirect to your login page
 
     product = get_object_or_404(Product, id=product_id)
@@ -35,7 +37,8 @@ def add_to_wishlist(request, product_id):
         messages.info(request, f"{product.name} is already in your wishlist.")
     else:
         wishlist.products.add(product)
-        messages.success(request, f"{product.name} has been added to your wishlist.")
+        messages.success(
+            request, f"{product.name} has been added to your wishlist.")
 
     return redirect('wishlist')
 
@@ -47,7 +50,9 @@ def remove_from_wishlist(request, product_id):
 
     if product in wishlist.products.all():
         wishlist.products.remove(product)
-        # Update the redirect to match your actual wishlist view name or URL pattern name
+        # Update the redirect to match actual wishlist view name
+        # or URL pattern name
         return redirect('wishlist')  # Update 'wishlist' to the correct name
     else:
-        return HttpResponseForbidden("You do not have permission to remove this item from your wishlist.")
+        return HttpResponseForbidden(
+          "You do not have permission to remove this item from your wishlist.")

@@ -39,4 +39,5 @@ class Product(models.Model):
         if amount == 100:
             return self.price * Decimal('2')  # Double the price for 100 grams
         else:
-            return (self.price / Decimal(self.amount_in_gram)) * Decimal(amount)
+            return (
+                self.price / Decimal(self.amount_in_gram)) * Decimal(amount)

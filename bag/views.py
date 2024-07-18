@@ -1,5 +1,7 @@
 from decimal import Decimal
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 from products.models import Product
 
@@ -36,26 +38,38 @@ def add_to_bag(request, item_id):
     price_per_item_float = float(price_per_item)
 
     # Determine which price_per_item to store in the bag
-    item_price_per_item = price_per_item_float if amount else float(product.price)
+    item_price_per_item = (
+        price_per_item_float if amount else float(product.price))
 
     # If the item already exists in the bag
     if item_id in bag:
         if amount:
             if amount in bag[item_id].get('items_by_amount', {}):
                 bag[item_id]['items_by_amount'][amount] += quantity
-                messages.success(request, f'Updated amount {amount}g {product.name} quantity to {bag[item_id]["items_by_amount"][amount]}')
+                messages.success(
+                    request,
+                    f'Updated amount {amount}g {product.name} \
+                        quantity to {bag[item_id]["items_by_amount"][amount]}')
             else:
                 bag[item_id]['items_by_amount'][amount] = quantity
-                messages.success(request, f'Added amount {amount}g {product.name} to your bag')
+                messages.success(
+                    request,
+                    f'Added amount {amount}g {product.name} to your bag')
         else:
             bag[item_id]['quantity'] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]["quantity"]}')
+            messages.success(
+                request,
+                f'Updated {product.name} \
+                    quantity to {bag[item_id]["quantity"]}')
     else:
         if amount:
-            bag[item_id] = {'items_by_amount': {amount: quantity}, 'price_per_item': item_price_per_item}
-            messages.success(request, f'Added amount {amount}g {product.name} to your bag')
+            bag[item_id] = {'items_by_amount': {amount: quantity},
+                            'price_per_item': item_price_per_item}
+            messages.success(
+                request, f'Added amount {amount}g {product.name} to your bag')
         else:
-            bag[item_id] = {'quantity': quantity, 'price_per_item': item_price_per_item}
+            bag[item_id] = {'quantity': quantity,
+                            'price_per_item': item_price_per_item}
             messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
@@ -75,16 +89,23 @@ def adjust_bag(request, item_id):
     if amount:
         if quantity > 0:
             bag[item_id]['items_by_amount'][amount] = quantity
-            messages.success(request, f'Updated amount {amount.upper()} {product.name} quantity to {bag[item_id]["items_by_amount"][amount]}')
+            messages.success(
+                request,
+                f'Updated amount {amount.upper()} {product.name} quantity \
+                    to {bag[item_id]["items_by_amount"][amount]}')
         else:
             del bag[item_id]['items_by_amount'][amount]
             if not bag[item_id]['items_by_amount']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed amount {amount.upper()} {product.name} from your bag')
+            messages.success(
+                request,
+                f'Removed amount {amount.upper()} {product.name} \
+                    from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(
+                request, f'Updated {product.name} quantity to {bag[item_id]}')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
@@ -107,7 +128,10 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_amount'][amount]
             if not bag[item_id]['items_by_amount']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed amount {amount.upper()} {product.name} from your bag')
+            messages.success(
+                request,
+                f'Removed amount {amount.upper()} {product.name} \
+                    from your bag')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')

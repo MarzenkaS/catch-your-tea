@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -68,7 +70,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for amount, quantity in item_data.get('items_by_amount', {}).items():
+                        for amount, quantity in \
+                         item_data.get('items_by_amount', {}).items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -78,23 +81,26 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't"
+                        "found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
-            # Update user's profile with the order (assuming UserProfile has a method like add_order)
+            # Update user's profile with the order
+            # (assuming UserProfile has a method like add_order)
             if request.user.is_authenticated:
                 try:
                     user_profile = UserProfile.objects.get(user=request.user)
-                    user_profile.add_order(order)  # Implement this method in your UserProfile model
+                    user_profile.add_order(order)
                 except UserProfile.DoesNotExist:
-                    pass  # Handle case where UserProfile does not exist for the user
+                    pass
 
             request.session['bag'] = {}
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
 
         else:
             messages.error(request, 'There was an error with your form. \
@@ -102,7 +108,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -114,7 +121,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any info
+        # the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)

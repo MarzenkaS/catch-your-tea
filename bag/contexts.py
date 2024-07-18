@@ -26,8 +26,10 @@ def bag_contents(request):
             })
         else:
             try:
-                for amount, quantity in item_data.get('items_by_amount', {}).items():
-                    subtotal = quantity * product.get_price_for_amount(int(amount))
+                for amount, quantity in \
+                 item_data.get('items_by_amount', {}).items():
+                    subtotal = quantity * \
+                        product.get_price_for_amount(int(amount))
                     total += subtotal
                     product_count += quantity
                     bag_items.append({
@@ -38,8 +40,9 @@ def bag_contents(request):
                         'subtotal': subtotal,
                     })
             except AttributeError:
-                # Handle cases where 'items_by_amount' is not present or structured unexpectedly
-                quantity = item_data.get('quantity', 0)  # Default to 0 if quantity is missing
+                # Handle cases where 'items_by_amount'
+                # is not present or structured unexpectedly
+                quantity = item_data.get('quantity', 0)
                 subtotal = quantity * product.price
                 total += subtotal
                 product_count += quantity

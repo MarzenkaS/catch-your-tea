@@ -17,6 +17,7 @@ Catch Your Tea is a (fictitious) e-commerce online shop. The store is created fo
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#future-features)
+    - [Custom 404 page](#custom-404-page)
 - [Database Design](#database-deign)
   - [Database Model](#database-model)
   - [Custom Model](#custom-model)
@@ -88,14 +89,19 @@ Navigation Bar
 
 1- navbar view
 ![navbar](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/navbar_tvlmxi.png)
+
 2- all products view
 ![all products](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/all.products_x365vj.png)
+
 3- product detail view
 ![product detail](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/product.detail_j8rgcy.png)
+
 4- add to bag view
 ![add to bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167253/catch%20your%20tea/add.to.bag_omphkw.png)
+
 5- shopping bag view
 ![shopping bag](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/shopping.bag_dkugr2.png)
+
 6- order confirmation view
 ![order confirmation](https://res.cloudinary.com/dguqjbr12/image/upload/v1721168901/catch%20your%20tea/order.confirmation_xhuwya.png)
 
@@ -166,7 +172,6 @@ Footer
 - At very bottom of page user can open Privacy Policy
 
 ![footer](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167260/catch%20your%20tea/footer_wg2lco.png)
-![]()
 
 ### Future Features
 
@@ -175,6 +180,12 @@ Footer
 - Create forum for users
 - The overall rating of the product should change depending on how users rate the tea
 - Available product stocks visible to the user
+
+### Custom 404 page
+
+Custom 404 page displays when a user tries to access a URL that does not exist. Back button redirects user back to home page.
+
+![404 page](https://res.cloudinary.com/dguqjbr12/image/upload/v1721336870/catch%20your%20tea/404page_y41ocn.png)
 
 ## Database Design
 
@@ -218,45 +229,81 @@ Features visualized here [Existing Features](#existing-features)
 
 HTML W3C validator
 
-- Home page
-
+- templates
 ![]()
 
 - 
-
 ![]()
 
 - 
-
 ![]()
+
+- 
+![]()
+
+- 
+![]()
+
 
 CSS W3C validator
 
 No errors
-
 ![]()
+
 
 JavaScript JSHint
 
-![]()
+- stripe_elements.js 
+
+Line 12 One undefined variable Stripe (variable is inherent in Stripe functionality)
+Line 117 missing semicolon
+
+- quantity_input_script.html 
+
+No errors
+
 
 Python CI Python Linter
 
-- products app ????? add others app
+All files are error-free, some had errors because the code line was too long.
 
-No errors in admin.py, urls.py, models.py, views.py
+- bag app
 
-- My dog project app
+No errors in urls.py, views.py, custom_filters.py, contexts.py
 
-No errors in settings.py and urls.py
+- checkout app
+
+No errors in admin.py, forms.py, models.py, views.py, urls.py, webhook_handler.py, webhooks.py
+
+- contact app
+
+No errors in forms.py, models.py, urls.py, views.py
+
+- home app
+
+No errors in urls.py, views.py
+
+- products app
+
+No errors in forms.py, models.py, urls.py, views.py, widgets.py
+
+- profiles app
+
+No errors in forms.py, urls.py, views.py, models.py
+
+- testimonials app
+
+No errors in forms.py, models.py, urls,py, views.py
+
+- wishlist app
+
+No errors in views.py, urls.py, models.py
 
 
 ### Lighthouse
 
-I made a Lighthouse while being incognito. Had some issues to achieve high Accessibility and SEO.
+I made a Lighthouse while being incognito. 
 
-- 
-- 
 
 1. Desktop
 
@@ -265,6 +312,7 @@ I made a Lighthouse while being incognito. Had some issues to achieve high Acces
 2. Mobile
 
 ![]()
+
 
 ### Other browsers
 I tested my website on Google Chrome, Microsoft Edge, Mozilla Firefox and Safari. All functionality works.
@@ -319,6 +367,166 @@ Thanks to Bootstrap my project is responsive on all device sizes
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 
 ## Deployment
+
+This project was deployed using [Heroku](https://heroku.com/), [ElephantSQL](https://www.elephantsql.com/) and [AWS](https://aws.amazon.com/). For a full list of libraries refer to [Technologies Used](#technologies-used).
+
+#### Installing libraries
+
+The following steps outline all libraries needed for successful deployment on Heroku. All necessary requirements and settings updates will not be discussed in this section as they are assumed as logical follow-up steps to installments. For full explanation on how to install these libraries, refer to the links provided in [Technologies Used](#technologies-used).
+
+- Install **pyscopg2** (connects to PostgreSQL): ``pip 3 install dj_database_url pyscopg2``
+- Install **Gunicorn** (server used to run Django on Heroku): ``pip3 install django gunicorn``
+
+#### Creating the Heroku App
+
+- Log into Heroku and go to the Dashboard
+- Click **New** and select **Create new app** from the drop-down
+- Name app appropriately and choose relevant region, then click **Create App**
+
+#### Create PostgreSQL database using ElephantSQL
+
+This is necessary to create a database that can be accessed by Heroku. The database provided by Django can not be accessed by the deployed Heroku app.
+
+- Log into ElephantSQL and go to Dashboard
+- Click **Create New Instance**
+- Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen). Tags are optional.
+- Click **Select Region** and choose appropriate Data center
+- Click **Review**, check all details and click **Create Instance**
+- Return to Dashboard on click on the name of the newly created instance
+- Copy the database URL from the details section
+
+#### Hiding sensitive information
+
+- Create ``env.py`` file and ensure it is included in the ``.gitignore`` file
+- Add ``import os`` to env.py file and set environment variable **DATABASE_URL** to the URL copied from ElephantSQL (``os.environ["DATABASE_URL"]="<copiedURL>"``)
+- Below, set **SECRET_KEY** variable (``os.environ["SECRET_KEY"]="mysecretkey"``, but be more inventive about the key string!)
+
+#### Update Settings
+
+- Add the following code at the top of ``settings.py`` to connect Django project to env.py:
+    ````
+      import os
+      import dj_database_url
+      if os.path.isfile('env.py'):
+          import env
+    ````
+- Remove insecure secret key provide by Django in settings.py and refer to variable in env.py instead (``SECRET_KEY = os.environ.get('SECRET_KEY')``)
+
+- To connect to new database, replace provided **DATABASE** variable with 
+    ````
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+    ````
+- Save and migrate all changes made and load in fixtures
+
+#### Preparing for Heroku
+
+- Create Procfile (tells Heroku to create web dyno which will run gunicorn and serve Django app)
+
+- Temporarily disable collectstatic (prevent Heroku from collecting static files when deploying)
+
+- Allow Heroku as host:
+
+    In ``settings.py`` add
+        ````
+        ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+        ````
+
+#### Connecting Heroku to Database
+
+- In Heroku dashboard, go to **Settings** tab
+- Add three new config vars **DATABASE_URL** (value is database URL), **SECRET_KEY** (value is secret key string) and **PORT** (value "8000")
+
+
+#### Deyploying with Heroku
+
+- In Heroku dashboard, go to **Deploy** tab
+- Select "GitHub" as Deployment method and choose correct repo
+- Enable Automatic Deploys
+- Click "Deploy Branch" button
+
+
+#### Hosting images and static file with AWS
+
+- Create AWS account and go to AWS Management Console in the My Account dropdown
+- Find and access S3 as a service and create a new bucket:
+
+    Under Object Ownership, check "ACLs enabled"
+
+    Uncheck "Block all public access" and acknowledge (required for public access to static files)
+
+- Configur bucket settings:
+
+    Under **Properties**, enable Static Website Hosting
+
+    Under **Permissions**, copy the following code into CORS section:
+
+    ```
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+    This is required to set up the access between the Heroku app and the S3 bucket.
+
+    Under **Bucket policy**, go to Policy generator.
+
+    Bucket Type = S3 Bucket Policy
+
+    Principal = * (allows all principles)
+
+    Actions = GetObject
+
+    Paste in ARN from bucket settings tab.
+
+    Click Add Statement, then Generate Policy.
+
+    Copy policy in paste into bucket policy editor. Also add ``/*`` onto the end of the resource key.
+
+    Click Save.
+
+    Under **Access control list (ACL)**, check "List" checkbox for "Everyone (public access)"
+
+- Create user to access bucket with IAM (Identity and Access Management)
+
+    In IAM, got to User Groups (sidebar left).
+
+    There create a group for a user, create an access policy giving the group access to the S3 bucket and assign the user to the group so it can use the policy to access all files. 
+
+- Connect Django to S3
+
+    Install packages "boto3" and "django-storages" and add ``'storages'`` to INSTALLED_APPS  in settings.py
+
+    Configure settings.py accordingly, including necessary AWS variables.
+
+    Add new config vars in Heroku app settings, including user credentials from AWS.
+
+    Create ``custom_storages.py`` file.
+
+- Upload static files and media files to S3
+
+
+#### Add Stripe keys to Heroku
+
+From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings.
+
+Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars.
+
+
+
+
+
 
 ## Credits
 
