@@ -248,7 +248,7 @@ Features visualized here [Existing Features](#existing-features)
 2. CSS W3C validator
 
 No errors
-![]()
+![css validator](https://res.cloudinary.com/dguqjbr12/image/upload/v1721404650/catch%20your%20tea/css_z4lvcl.png)
 
 
 3. JavaScript JSHint
@@ -307,11 +307,13 @@ I made a Lighthouse while being incognito.
 
 1. Desktop
 
-![]()
+![desktop lighthouse](https://res.cloudinary.com/dguqjbr12/image/upload/v1721404666/catch%20your%20tea/lighthouse.desktop_oj4rrz.png)
 
 2. Mobile
 
-![]()
+![mobile lighthouse](https://res.cloudinary.com/dguqjbr12/image/upload/v1721404662/catch%20your%20tea/lighthouse.mobile_hync0z.png)
+
+The performance score resulting from referencing external libraries and technologies such as Bootstrap, JQuery and Stripe that the project relies on, cannot be higher.
 
 
 ### Other browsers
@@ -321,6 +323,7 @@ I tested my website on Google Chrome, Microsoft Edge, Mozilla Firefox and Safari
 Thanks to Bootstrap my project is responsive on all device sizes
 
 ### Bugs
+
 
 ## Used technologies
 
@@ -524,10 +527,6 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings, Gitpod settings and add to env.py
 
 Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars, Gitpod settings and add to env.py
-
-
-
-
 
 
 ## Credits
