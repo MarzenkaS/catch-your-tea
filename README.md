@@ -406,12 +406,13 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 
 - Add the following code at the top of ``settings.py`` to connect Django project to env.py:
     ````
+      from pathlib import Path
       import os
       import dj_database_url
-      if os.path.isfile('env.py'):
+      if os.path.exists("env.py"):
           import env
     ````
-- Remove insecure secret key provide by Django in settings.py and refer to variable in env.py instead (``SECRET_KEY = os.environ.get('SECRET_KEY')``)
+- Remove insecure secret key provide by Django in settings.py and refer to variable in env.py instead ``SECRET_KEY = os.environ.get('SECRET_KEY', '')``
 
 - To connect to new database, replace provided **DATABASE** variable with 
     ````
@@ -431,13 +432,13 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 
     In ``settings.py`` add
         ````
-        ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+        ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost', 'URL of deployed site from heroku and Gitpod']
         ````
 
 #### Connecting Heroku to Database
 
 - In Heroku dashboard, go to **Settings** tab
-- Add three new config vars **DATABASE_URL** (value is database URL), **SECRET_KEY** (value is secret key string) and **PORT** (value "8000")
+- Add three new config vars **DATABASE_URL** , **SECRET_KEY** and **PORT** (value "8000")
 
 
 #### Deyploying with Heroku
@@ -520,9 +521,9 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 
 #### Add Stripe keys to Heroku
 
-From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings.
+From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings, Gitpod settings and add to env.py
 
-Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars.
+Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars, Gitpod settings and add to env.py
 
 
 
