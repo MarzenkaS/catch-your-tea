@@ -116,7 +116,8 @@ My Account
 ![register](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/register_xnpkra.png)
 ![my profile](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/my.profile_obcddm.png)
 ![product management](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/product.management_qp1sus.png)
-
+![product management1](https://res.cloudinary.com/dguqjbr12/image/upload/v1721409088/catch%20your%20tea/pm1_xvez4k.jpg)
+![product management2](https://res.cloudinary.com/dguqjbr12/image/upload/v1721409087/catch%20your%20tea/pm2_xbbovf.jpg)
 
 Login
 - For registered already user
@@ -303,7 +304,6 @@ No errors in views.py, urls.py, models.py
 ### Lighthouse
 
 I made a Lighthouse while being incognito. 
-
 
 1. Desktop
 
