@@ -116,8 +116,7 @@ My Account
 ![register](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167252/catch%20your%20tea/register_xnpkra.png)
 ![my profile](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167251/catch%20your%20tea/my.profile_obcddm.png)
 ![product management](https://res.cloudinary.com/dguqjbr12/image/upload/v1721167254/catch%20your%20tea/product.management_qp1sus.png)
-![product management1](https://res.cloudinary.com/dguqjbr12/image/upload/v1721409088/catch%20your%20tea/pm1_xvez4k.jpg)
-![product management2](https://res.cloudinary.com/dguqjbr12/image/upload/v1721409087/catch%20your%20tea/pm2_xbbovf.jpg)
+
 
 Login
 - For registered already user
@@ -230,20 +229,92 @@ Features visualized here [Existing Features](#existing-features)
 
 1. HTML W3C validator
 
-- templates
-![]()
+- base/home page
 
-- 
-![]()
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418018/catch%20your%20tea/homebase_hiknyq.png)
+Fix: 
+- I wrapped li elements in ul element
+- Duplicated ID i changed in mobile-top-header for user-options-mobile
 
-- 
-![]()
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418018/catch%20your%20tea/homebase1_gtgeiu.png)
+Fix:
+- bg-white I removed from id and added to class
+- removed type attribute from script
 
-- 
-![]()
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
 
-- 
-![]()
+
+- products
+
+error in products template
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721421416/catch%20your%20tea/error.products_xrljef.png)
+Fix: 
+- Fixed by changing id from id="add-to-wishlist-link" to id="add-to-wishlist-link-{{ product.id }}
+
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
+
+
+error in add_product
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721421416/catch%20your%20tea/error.addproduct_idjb0u.png)
+Fix:
+- I removed strong element
+- I removed type from script
+
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721421415/catch%20your%20tea/error.addproduct1_hvjomw.png)
+error comes from django/forms/widgets/attrs.html
+
+
+error in edit_product
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721421416/catch%20your%20tea/error.editproduct_gbtnap.png)
+Fix:
+- I removed double quote
+- I added alt attribute to img
+
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721421416/catch%20your%20tea/error.editproduct1_zug7ja.png)
+error comes from django/forms/widgets/attrs.html
+
+no errors in product_detail
+
+
+- profiles
+
+no errors
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
+
+
+- bag
+
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721423487/catch%20your%20tea/error.bag_yimfm2.png)
+errors come from quantity-form.html which I didn't create
+
+- checkout
+
+warning in checkout template
+![warning](https://res.cloudinary.com/dguqjbr12/image/upload/v1721423487/catch%20your%20tea/warning.checkout_y9y5k3.png)
+
+no errors in checkout_success template
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
+
+
+- contact page
+
+no errors
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
+
+- testimonials page
+
+no errors in testimonial_list, edit_testimonial, delete_testimonial, add_testimonial templates
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
+
+
+- wishlist page
+
+![error](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/wishlisterror_hhjdtu.png)
+Fix:
+- I changed p to div element
+- instead of element br I used bootstrap style for margin bottom
+
+![fix](https://res.cloudinary.com/dguqjbr12/image/upload/v1721418017/catch%20your%20tea/no.errors_pe7681.png)
 
 
 2. CSS W3C validator
