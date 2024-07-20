@@ -82,13 +82,15 @@
                                         {% include "bag/product-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price|conditional_double:item.product.amount_in_gram|floatformat:2 }}</p>
+                                        <!-- Passing the actual amount of the item in the bag -->
+                                        {{item.product.price|conditional_double:item.amount}}
                                     </td>
                                     <td class="py-3 w-25">
                                         {% include "bag/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price|calc_subtotal:item.quantity|floatformat:2 }}</p>
+                                        <!-- Using the subtotal for the item calculated by the method in the bag -->
+                                        {{item.subtotal|floatformat:2}}
                                     </td>
                                 </tr>
                             {% endfor %}

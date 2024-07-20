@@ -394,6 +394,17 @@ I tested my website on Google Chrome, Microsoft Edge, Mozilla Firefox and Safari
 Thanks to Bootstrap my project is responsive on all device sizes
 
 ### Bugs
+There is no bugs however the biggest problem was to get right price and subtotal for 100 gram of product in shopping bag(bag.html), subtotal in checkout.html and price, Order Total, Gran Total in order confirmation(checkout_success.html).
+
+![bug](https://res.cloudinary.com/dguqjbr12/image/upload/v1721471557/catch%20your%20tea/bug_esdcow.png)
+In bag.html I added on line 86 {{item.product.price|conditional_double:item.amount}} and line 93 {{item.subtotal|floatformat:2}}
+
+![bug1](https://res.cloudinary.com/dguqjbr12/image/upload/v1721471557/catch%20your%20tea/bug1_wte8jf.png)
+In checkout.html on line 56 I added {{item.subtotal}} to get right subtotal
+
+![bug2](https://res.cloudinary.com/dguqjbr12/image/upload/v1721471557/catch%20your%20tea/bug2_wa2nt4.png)
+In checkout_success.html I added extra line with code €{{item.product.price|conditional_double:item.product_amount}} so right amount and price for it is visible.
+Order Total and Frand Total are fixed by changing in checkout models in class OrderLineItem line 93 if self.product_amount == 100: (it was a string) to if self.product_amount == '100':. this fixed calculation.
 
 
 ## Used technologies

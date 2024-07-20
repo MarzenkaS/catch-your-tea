@@ -36,6 +36,7 @@ class Product(models.Model):
         """
         Calculate the price for the given amount.
         """
+        print("Amount in method:", amount)
         if amount == 100:
             return self.price * Decimal('2')  # Double the price for 100 grams
         else:

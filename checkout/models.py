@@ -90,7 +90,7 @@ class OrderLineItem(models.Model):
         try:
             # Calculate the price per item based on
             # selected amount or default 50g
-            if self.product_amount == 100:
+            if self.product_amount == '100':
                 price_per_item = self.product.get_price_for_amount(100)
             else:
                 price_per_item = self.product.price  # Default price for 50g
